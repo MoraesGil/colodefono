@@ -1,40 +1,22 @@
 import React from "react";
-import { Icons } from "./styles";
-import { FaInstagram, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { Container } from "./IconsButtons.styles";
 
-const IconsButtons: React.FC = (): JSX.Element => {
+const IconsButtons: React.FC = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-      }}
-    >
-      <div style={{ padding: 15 }}>
-        <Icons href="https://www.instagram.com/colodefono/" target="_blank">
-          <FaInstagram size={26} />
-        </Icons>
-      </div>
-      <div style={{ padding: 15 }}>
-        <Icons
-          href="https://www.linkedin.com/in/valeria-moraes-fonoaudiologia/"
-          target="_blank"
-        >
-          <FaLinkedin size={26} />
-        </Icons>
-      </div>
-      <div style={{ padding: 15 }}>
-        <Icons href="https://www.youtube.com" target="_blank">
-          <FaYoutube size={26} />
-        </Icons>
-      </div>
-      <div style={{ padding: 15 }}>
-        <Icons href="https://www.youtube.com" target="_blank">
-          <FaTiktok size={26} />
-        </Icons>
-      </div>
-    </div>
+    <Container>
+      <a href="https://www.instagram.com/colodefono/" target="_blank">
+        <FaInstagram />
+      </a>
+
+      <a href="https://www.linkedin.com" target="_blank">
+        <FaLinkedin/>
+      </a>
+
+      <a href="https://www.youtube.com" target="_blank">
+        <FaYoutube />
+      </a>
+    </Container>
   );
 };
 
