@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor, ListItem } from './LinkButton.styles';
+import { Container } from './LinkButton.styles';
 
 type LinkButtonType = {
   href: string;
@@ -8,9 +8,9 @@ type LinkButtonType = {
 
 const LinkButton: React.FC<LinkButtonType> = ({ href, text }) => {
 return (
-  <ListItem>
-    <Anchor href={href}>{text}</Anchor>
-  </ListItem>
+  <Container>
+    <a href={href}>{text}</a>
+  </Container>
 );
 };
 
