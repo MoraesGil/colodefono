@@ -1,10 +1,10 @@
 import React from 'react';
-import { LinkListContainer } from './LinkList.styles';
+import { Container } from './LinkList.styles';
 
 type LinkListType = { children: React.ReactNode };
 
 const LinkList: React.FC<LinkListType> = ({ children }) => {
-    return <LinkListContainer>{children}</LinkListContainer>;
+    return <Container>{children}</Container>;
   }
 
 export default LinkList;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LinkListContainer = styled.ul`
+export const Container = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
