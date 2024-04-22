@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const certificateImages: Record<number, string[]> = {
+const certificatesImages: Record<number, string[]> = {
   1: [
     "./src/assets/certificates/1/1_page-0001.jpg",
     "./src/assets/certificates/1/1_page-0002.jpg",
@@ -91,7 +91,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({ onSelect }) => (
   </div>
 );
 
-const CertificatePage: React.FC = () => {
+const CertificatesPage: React.FC = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<number | null>(
     null
   );
@@ -118,7 +118,7 @@ const CertificatePage: React.FC = () => {
               justifyContent: "center",
             }}
           >
-            {certificateImages[selectedCertificate].map((img, index) => (
+            {certificatesImages[selectedCertificate].map((img, index) => (
               <img
                 key={index}
                 src={img}
@@ -135,4 +135,4 @@ const CertificatePage: React.FC = () => {
   );
 };
 
-export default CertificatePage;
+export default CertificatesPage;

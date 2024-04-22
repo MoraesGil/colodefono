@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "./theme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./screens/HomePage";
-import CertificatePage from "./screens/CertificatePage";
+import CertificatePage from "./screens/CertificatesPage";
 
 function App() {
   return (
