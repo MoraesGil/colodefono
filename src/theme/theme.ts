@@ -1,8 +1,10 @@
 const theme = {
   COLORS: {
-    NEUTRAL_0: "#fff",
-    NEUTRAL_100: "#faf9f7",
-    NEUTRAL_200: "#f3f2f0",
+    TEXT_COLOR: "#ffffff",
+    STROKE_COLOR: "rgba(255, 255, 255, 0.5)",
+    SURFACE_COLOR: "rgba(255, 255, 255, 0.1)",
+    SURFACE_HOVER_COLOR: "rgba(255, 255, 255, 0.05)",
+    HIGHLIGHT_COLOR: "rgba(255, 255, 255, 0.2)",
   },
   FONT_FAMILY: {
     REGULAR: "Roboto_400Regular",
