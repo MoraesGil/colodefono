@@ -1,7 +1,7 @@
 import React from "react";
 import { ProfileContainer, ProfileImg, ProfileP } from "./styles";
 
-const Profile: React.FC = (): any => {
+const Profile: React.FC = (): JSX.Element => {
   return (
     <div
       style={{
@@ -10,10 +10,10 @@ const Profile: React.FC = (): any => {
       }}
     >
       <ProfileContainer>
-        <ProfileImg src="./src/assets/avatar/avatar.png" />
+        <ProfileImg src="./src/assets/avatar/avatarFono.jpg" />
       </ProfileContainer>
 
-      <ProfileP>@instagram</ProfileP>
+      <ProfileP>@colodefono</ProfileP>
     </div>
   );
 };

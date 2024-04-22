@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
   text-align: center;
-  padding: 24px 0px;
+  padding: 12px 0px;
 `;
 
 export const ProfileImg = styled.img`
@@ -15,5 +15,5 @@ export const ProfileImg = styled.img`
 export const ProfileP = styled.p`
   font-weight: 500;
   line-height: 24px;
-  margin-top: 8px;
+  margin-top: 2px;
 `;
