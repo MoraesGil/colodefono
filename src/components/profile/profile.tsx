@@ -10,10 +10,10 @@ const Profile: React.FC = (): JSX.Element => {
       }}
     >
       <ProfileContainer>
-        <ProfileImg src="./src/assets/avatar/avatar.png" />
+        <ProfileImg src="./src/assets/avatar/avatarFono.jpg" />
       </ProfileContainer>
 
-      <ProfileP>@instagram</ProfileP>
+      <ProfileP>@colodefono</ProfileP>
     </div>
   );
 };

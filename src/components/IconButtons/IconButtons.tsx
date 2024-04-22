@@ -11,19 +11,19 @@ const IconsButtons: React.FC = (): JSX.Element => {
         justifyContent: "center",
       }}
     >
-      <div style={{ padding: 5 }}>
-        <Icons href="https://www.instagram.com" target="_blank">
-          <FaInstagram size={24} />
+      <div style={{ padding: 15 }}>
+        <Icons href="https://www.instagram.com/colodefono/" target="_blank">
+          <FaInstagram size={26} />
         </Icons>
       </div>
-      <div style={{ padding: 5 }}>
+      <div style={{ padding: 15 }}>
         <Icons href="https://www.linkedin.com" target="_blank">
-          <FaLinkedin size={24} />
+          <FaLinkedin size={26} />
         </Icons>
       </div>
-      <div style={{ padding: 5 }}>
+      <div style={{ padding: 15 }}>
         <Icons href="https://www.youtube.com" target="_blank">
-          <FaYoutube size={24} />
+          <FaYoutube size={26} />
         </Icons>
       </div>
     </div>
