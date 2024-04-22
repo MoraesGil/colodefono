@@ -1,12 +1,12 @@
 import { ThemeProvider } from 'styled-components'
-import './App.css'
 import theme from './theme'
+import LinkButton from './components/LinkButton'
 
 function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div></div>
+     <div></div>
     </ThemeProvider>
   )
 }
