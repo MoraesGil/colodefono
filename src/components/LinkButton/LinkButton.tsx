@@ -10,9 +10,7 @@ type LinkButtonType = {
 const LinkButton: React.FC<LinkButtonType> = ({ href, text }) => {
   return (
     <Container>
-      <Link to={href}>
-        <a>{text}</a>
-      </Link>
+      <Link to={href}>{text}</Link>
     </Container>
   );
 };

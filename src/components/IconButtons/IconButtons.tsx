@@ -1,6 +1,6 @@
 import React from "react";
 import { Icons } from "./styles";
-import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const IconsButtons: React.FC = (): JSX.Element => {
   return (
@@ -17,13 +17,21 @@ const IconsButtons: React.FC = (): JSX.Element => {
         </Icons>
       </div>
       <div style={{ padding: 15 }}>
-        <Icons href="https://www.linkedin.com" target="_blank">
+        <Icons
+          href="https://www.linkedin.com/in/valeria-moraes-fonoaudiologia/"
+          target="_blank"
+        >
           <FaLinkedin size={26} />
         </Icons>
       </div>
       <div style={{ padding: 15 }}>
         <Icons href="https://www.youtube.com" target="_blank">
           <FaYoutube size={26} />
+        </Icons>
+      </div>
+      <div style={{ padding: 15 }}>
+        <Icons href="https://www.youtube.com" target="_blank">
+          <FaTiktok size={26} />
         </Icons>
       </div>
     </div>
