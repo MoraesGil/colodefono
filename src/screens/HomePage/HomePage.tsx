@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
       <Profile />
 
       <LinkList>
-        <LinkButton text="Certificados" href="https://example.com" />
+        <LinkButton text="Certificados" href="/certificates" />
         <LinkButton text="Clique Aqui" href="https://example.com" />
         <LinkButton text="Clique Aqui" href="https://example.com" />
         <LinkButton text="Clique Aqui" href="https://example.com" />
