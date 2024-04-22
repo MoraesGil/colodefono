@@ -2,11 +2,11 @@ import React from 'react';
 import { Anchor, ListItem } from './LinkButton.styles';
 
 type LinkButtonType = {
-  text: string;
   href: string;
+  text: string;
 }
 
-const LinkButton: React.FC<LinkButtonType> = ({ text, href }) => {
+const LinkButton: React.FC<LinkButtonType> = ({ href, text }) => {
 return (
   <ListItem>
     <Anchor href={href}>{text}</Anchor>
