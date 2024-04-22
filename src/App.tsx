@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import theme from './theme'
-import LinksPage from './screens/LinksPage';
+import LinksPage from './screens/HomePage';
 
 function App() {
   return (
