@@ -1,7 +1,7 @@
 import React from "react";
 import { ProfileContainer, ProfileImg, ProfileP } from "./styles";
 
-const Profile: React.FC = (): any => {
+const Profile: React.FC = (): JSX.Element => {
   return (
     <div
       style={{
