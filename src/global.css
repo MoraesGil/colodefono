@@ -7,7 +7,8 @@
 }
 
 body {
-  background: url("./assets/bg-fono.jpg") no-repeat top center/cover;
+  background: linear-gradient(to top right, rgb(255 150 196)
+  , rgb(164 226 251));
   height: 100vh;
 }
 

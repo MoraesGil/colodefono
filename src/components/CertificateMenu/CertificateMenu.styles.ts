@@ -5,7 +5,15 @@ export const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 6rem;
-  flex-wrap: wrap;
+
+  .pd10 {
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const Logo = styled.div`
@@ -14,9 +22,15 @@ export const Logo = styled.div`
 `;
 
 export const NavList = styled.div`
-  display: "flex";
+  display: flex;
   align-items: "center";
   justify-content: "space-around";
+  span {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
 `;
 
 export const BackButton = styled.button`

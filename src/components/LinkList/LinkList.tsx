@@ -7,8 +7,6 @@ const LinkList: React.FC = () => {
     <Container>
       <LinkButton text="Certificados" href="/certificates" />
       <LinkButton text="Colo de fono, agende um papo" href="https://calendly.com/colodefono-consulta/30min"/>
-      <LinkButton text="Clique Aqui" href="https://example.com" />
-      <LinkButton text="Clique Aqui" href="https://example.com" />
     </Container>
   );
 };

@@ -49,17 +49,17 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   return (
     <Container>
       <NavBar>
-        <Logo>Colo de Fono</Logo>
+        <Logo className="pd10">Colo de Fono</Logo>
 
         <NavList>
           
             <FaCircleArrowLeft onClick={handlePrevious} size={25} />
 
-            <div>
-              <span style={{ padding: "0 1rem" }}>
+         
+              <span>
                 Certificado {currentCertificate}
               </span>
-            </div>
+            
 
             <FaCircleArrowRight onClick={handleNext} size={25} />
          
