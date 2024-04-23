@@ -1,4 +1,4 @@
-export const certificatesImages: Record<number, string[]> = {
+export const certificateImages: Record<number, string[]> = {
   1: [
     "./src/assets/certificates/20200819/001/frente.jpg",
     "./src/assets/certificates/20200819/001/verso.jpg",

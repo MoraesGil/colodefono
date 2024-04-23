@@ -5,14 +5,14 @@ import {
   Container,
   ContentWrapper,
 } from "./CertificatesPage.styles";
-import { certificatesImages } from "./CertificatesPaths";
+import { certificateImages } from "./CertificatePaths";
 
 const CertificatesPage: React.FC = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<number | null>(
     null
   );
 
-  const lengthArray = Object.keys(certificatesImages).length;
+  const lengthArray = Object.keys(certificateImages).length;
 
   return (
     <Container>
@@ -24,7 +24,7 @@ const CertificatesPage: React.FC = () => {
       <ContentWrapper>
         {selectedCertificate && (
           <CertificateImagesWrapper>
-            {certificatesImages[selectedCertificate].map((img, index) => (
+            {certificateImages[selectedCertificate].map((img, index) => (
               <img
                 key={index}
                 src={img}
