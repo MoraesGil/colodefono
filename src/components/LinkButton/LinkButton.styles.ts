@@ -11,8 +11,6 @@ export const Container = styled.li`
     background: ${({ theme }) => theme.COLORS.SURFACE_COLOR};
     border: 1px solid ${({ theme }) => theme.COLORS.STROKE_COLOR};
     border-radius: 8px;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
 
     text-decoration: none;
     font-weight: 500;
