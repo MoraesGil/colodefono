@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "./IconButtons.styles";
-import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa";
+import { Container } from "./IconsButtons.styles";
 
 const IconButtons: React.FC = () => {
   return (
@@ -10,11 +10,18 @@ const IconButtons: React.FC = () => {
       </a>
 
       <a href="https://www.linkedin.com" target="_blank">
-        <FaLinkedin/>
+        <FaLinkedin />
       </a>
 
-      <a href="https://www.youtube.com" target="_blank">
+      <a href="https://www.youtube.com/@colodefono2318" target="_blank">
         <FaYoutube />
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@colodefono?_t=8lke1Ym22bO&_r=1"
+        target="_blank"
+      >
+        <FaTiktok />
       </a>
     </Container>
   );
