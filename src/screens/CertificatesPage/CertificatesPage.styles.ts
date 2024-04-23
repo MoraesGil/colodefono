@@ -20,6 +20,7 @@ export const CertificateImagesWrapper = styled.div`
   justify-content: center;
 
   img {
+    padding-top: 10;
     width: 45%;
   }
 `;
