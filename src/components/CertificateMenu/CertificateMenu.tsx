@@ -3,23 +3,18 @@ import { BackButton, Container } from "./CertificateMenu.styles";
 
 interface CertificateMenuProps {
   onSelect: (id: number) => void;
+  lengthArray: number;
 }
 
-const CertificateMenu: React.FC<CertificateMenuProps> = ({ onSelect }) => (
+const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray, onSelect }) => (
   <Container>
     <h3>Certificados</h3>
 
     <ul>
       <li>
-        <Link to="#" onClick={() => onSelect(1)}>
+       <a onClick={() => onSelect(1)}>
           Certificado 1
-        </Link>
-      </li>
-
-      <li>
-        <Link to="#" onClick={() => onSelect(2)}>
-          Certificado 2
-        </Link>
+        </a>
       </li>
     </ul>
 
