@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
   CertificateImagesWrapper,
-  Container,
   ContentWrapper,
 } from "./CertificatesPage.styles";
 import { certificateImages } from "./CertificatePaths";
@@ -15,7 +14,7 @@ const CertificatesPage: React.FC = () => {
   const lengthArray = Object.keys(certificateImages).length;
 
   return (
-    <Container>
+    <div>
       <CertificateMenu
         lengthArray={lengthArray}
         onSelect={(id) => setSelectedCertificate(id)}
@@ -37,7 +36,7 @@ const CertificatesPage: React.FC = () => {
           <p>Selecione um certificado para ver sua imagem</p>
         )}
       </ContentWrapper>
-    </Container>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa";
-import { Container } from "./IconsButtons.styles";
+import { Container } from "./IconButtons.styles";
 
 const IconButtons: React.FC = () => {
   return (
