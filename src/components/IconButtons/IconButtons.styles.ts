@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   padding: 24px 0px;
 
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.FONT_SIZE.XXL}px;
 
   a {
     display: flex;
