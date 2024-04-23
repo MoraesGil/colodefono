@@ -1,7 +1,6 @@
 import React from "react";
-import LinkList from "../../components/LinkList/LinkList";
-import LinkButton from "../../components/LinkButton";
 import { Container } from "./HomePage.styles";
+import LinkList from "../../components/LinkList/LinkList";
 import IconButtons from "../../components/IconButtons";
 import Profile from "../../components/Profile";
 
@@ -10,12 +9,7 @@ const HomePage: React.FC = () => {
     <Container>
       <Profile />
 
-      <LinkList>
-        <LinkButton text="Certificados" href="/certificates" />
-        <LinkButton text="Clique Aqui" href="https://example.com" />
-        <LinkButton text="Clique Aqui" href="https://example.com" />
-        <LinkButton text="Clique Aqui" href="https://example.com" />
-      </LinkList>
+      <LinkList />
 
       <IconButtons />
     </Container>

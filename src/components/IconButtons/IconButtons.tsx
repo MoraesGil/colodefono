@@ -1,8 +1,8 @@
 import React from "react";
+import { Container } from "./IconButtons.styles";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { Container } from "./IconsButtons.styles";
 
-const IconsButtons: React.FC = () => {
+const IconButtons: React.FC = () => {
   return (
     <Container>
       <a href="https://www.instagram.com/colodefono/" target="_blank">
@@ -20,4 +20,4 @@ const IconsButtons: React.FC = () => {
   );
 };
 
-export default IconsButtons;
+export default IconButtons;
