@@ -36,14 +36,17 @@ const CertificatesPage: React.FC = () => {
       <ContentWrapper>
         {selectedCertificate && (
           <CertificateImagesWrapper>
+            
             {certificateImages[selectedCertificate].map((img, index) => (
+              <div>
               <img
                 key={index}
                 src={img}
                 alt={`Certificado ${selectedCertificate}`}
                 onClick={() => handleImageClick(img)}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer"}}
               />
+              </div>
             ))}
           </CertificateImagesWrapper>
         )}

@@ -4,12 +4,10 @@ import {
   BackButton,
   Container,
   Logo,
-  MobileMenu,
-  MobileMenuIcon,
   NavBar,
   NavList,
-  NextButton,
 } from "./CertificateMenu.styles";
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 interface CertificateMenuProps {
   onSelect: (id: number) => void;
@@ -20,7 +18,6 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   onSelect,
   lengthArray,
 }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [currentCertificate, setCurrentCertificate] = useState(0);
 
   const certificateCount = lengthArray;
@@ -49,73 +46,29 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
     }
   };
 
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
   return (
     <Container>
       <NavBar>
-        <Logo>
-          <img
-            className="img"
-            src="./src/assets/avatar/avatarFono.jpg"
-            alt="Logotipo"
-          />
-        </Logo>
+        <Logo className="pd10">Colo de Fono</Logo>
 
         <NavList>
-          {!menuOpen && (
-            <div>
-              <NextButton onClick={handlePrevious}>Anterior</NextButton>
-              <span style={{ padding: "0 1rem" }}>
+          
+            <FaCircleArrowLeft onClick={handlePrevious} size={25} />
+
+         
+              <span>
                 Certificado {currentCertificate}
               </span>
-              <NextButton onClick={handleNext}>Próximo</NextButton>
-            </div>
-          )}
+            
+
+            <FaCircleArrowRight onClick={handleNext} size={25} />
+         
         </NavList>
-
-        <BackButton className={`${menuOpen ? "open" : ""}`}>
-          <Link to={"/"}>Voltar</Link>
-        </BackButton>
-
-        <MobileMenuIcon>
-          <button onClick={toggleMenu}>
-            <img
-              className="icon"
-              src={
-                menuOpen
-                  ? "./src/assets/svg/close_white_36dp.svg"
-                  : "./src/assets/svg/menu_white_36dp.svg"
-              }
-              alt="Menu"
-            />
-          </button>
-        </MobileMenuIcon>
-      </NavBar>
-
-      <MobileMenu className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <NextButton onClick={handlePrevious}>Anterior</NextButton>
-
-          <span style={{ padding: "0 1rem" }}>
-            Certificado {currentCertificate}
-          </span>
-
-          <NextButton onClick={handleNext}>Próximo</NextButton>
-        </div>
 
         <BackButton>
           <Link to={"/"}>Voltar</Link>
         </BackButton>
-      </MobileMenu>
+      </NavBar>
     </Container>
   );
 };
