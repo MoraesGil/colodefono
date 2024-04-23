@@ -1,43 +1,88 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const NavBar = styled.nav`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  padding: 20px;
-  background: #f0f0f0;
-  border-right: 1px solid #ddd;
+  align-items: center;
+  padding: 1.5rem 6rem;
+`;
 
-  h3 {
-    color: black;
-  }
+export const Logo = styled.div`
+  display: flex;
+  align-items: center;
 
-  ul {
-    flex: 1;
-    list-style-type: none;
-    padding: 10px;
-    overflow: auto;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
+  img {
+    width: 112px;
+    border: 20px;
+    border-radius: 50%;
   }
 `;
 
-export const BackButton = styled.div`
+export const Img = styled.div`
+  width: 112px;
+  border: 20px;
+  border-radius: 50%;
+`;
+
+export const NavList = styled.div`
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+`;
+
+export const BackButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0187a7;
 
   a {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+`;
+
+export const MobileMenuIcon = styled.div`
+  display: none;
+`;
+
+export const MobileMenu = styled.div`
+  display: none;
+`;
+
+export const NextButton = styled.button`
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0187a7;
+`;
+
+export const Container = styled.header`
+  background-color: #f1dec5;
+  box-shadow: 0px 3px 10px #e0dabf;
+
+  @media screen and (max-width: 730px) {
+    padding: 1.5rem 4rem;
+
+    ${MobileMenuIcon} {
+      display: none;
+    }
+
+    ${MobileMenu} {
+      display: none;
+    }
+
+    ${BackButton} {
+      display: none;
+    }
   }
 `;
