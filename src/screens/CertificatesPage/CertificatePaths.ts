@@ -11,9 +11,7 @@ export const certificateImages: Record<number, string[]> = {
     "./src/assets/certificates/20181124/001/frente.jpg",
     "./src/assets/certificates/20181124/001/verso.jpg",
   ],
-  4: [
-    "./src/assets/certificates/20200314/001/frente.jpg",
-  ],
+  4: ["./src/assets/certificates/20200314/001/frente.jpg"],
   5: [
     "./src/assets/certificates/20200819/001/frente.jpg",
     "./src/assets/certificates/20200819/001/verso.jpg",
@@ -38,16 +36,8 @@ export const certificateImages: Record<number, string[]> = {
     "./src/assets/certificates/20230131/001/frente.jpg",
     "./src/assets/certificates/20230131/001/verso.jpg",
   ],
-  11: [
-    "./src/assets/certificates/20230330/001/frente.jpg",
-  ],
-  12: [
-    "./src/assets/certificates/20230405/001/frente.jpg",
-  ],
-  13: [
-    "./src/assets/certificates/20230501/001/frente.jpg",
-  ],
-  14: [
-    "./src/assets/certificates/20240403/001/frente.jpg",
-  ],
+  11: ["./src/assets/certificates/20230330/001/frente.jpg"],
+  12: ["./src/assets/certificates/20230405/001/frente.jpg"],
+  13: ["./src/assets/certificates/20230501/001/frente.jpg"],
+  14: ["./src/assets/certificates/20240403/001/verso.jpg"],
 };

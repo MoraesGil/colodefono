@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import "./ResponsiveMenu.css";
 import {
   BackButton,
   Container,
@@ -33,10 +32,21 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   };
 
   const handlePrevious = () => {
-    const prevCertificate =
-      ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
-    setCurrentCertificate(prevCertificate);
-    onSelect(prevCertificate);
+    if (currentCertificate === 0) {
+      const prevCertificate =
+        ((currentCertificate - 1 + certificateCount) % certificateCount) + 1;
+
+      setCurrentCertificate(prevCertificate);
+      onSelect(prevCertificate);
+    }
+
+    if (currentCertificate > 0) {
+      const prevCertificate =
+        ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
+
+      setCurrentCertificate(prevCertificate);
+      onSelect(prevCertificate);
+    }
   };
 
   const toggleMenu = () => {
