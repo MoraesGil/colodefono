@@ -3,12 +3,8 @@ const theme = {
     TEXT_COLOR: "#ffffff",
     STROKE_COLOR: "rgba(255, 255, 255, 0.5)",
     SURFACE_COLOR: "rgba(255, 255, 255, 0.1)",
-    SURFACE_HOVER_COLOR: "rgba(255, 255, 255, 0.05)",
+    SURFACE_HOVER_COLOR: "rgba(255, 255, 255, 0.3)",
     HIGHLIGHT_COLOR: "rgba(255, 255, 255, 0.2)",
-  },
-  FONT_FAMILY: {
-    REGULAR: "Roboto_400Regular",
-    BOLD: "Roboto_700Bold",
   },
   FONT_SIZE: {
     XS: 12,

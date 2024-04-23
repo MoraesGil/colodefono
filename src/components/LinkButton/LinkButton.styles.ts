@@ -8,8 +8,8 @@ export const Container = styled.li`
 
     padding: 16px 24px;
 
-    background: var(--surface-color);
-    border: 1px solid var(--stroke-color);
+    background: ${({ theme }) => theme.COLORS.SURFACE_COLOR};
+    border: 1px solid ${({ theme }) => theme.COLORS.STROKE_COLOR};
     border-radius: 8px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -21,7 +21,7 @@ export const Container = styled.li`
   }
 
   a:hover {
-    background: var(--surface-color-hover);
-    border: 1.5px solid var(--text-color);
+    background: ${({ theme }) => theme.COLORS.SURFACE_COLOR};
+    border: 1.5px solid ${({ theme }) => theme.COLORS.TEXT_COLOR};
   }
 `;
