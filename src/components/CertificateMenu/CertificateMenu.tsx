@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./ResponsiveMenu.css";
+import {
+  BackButton,
+  Container,
+  Logo,
+  MobileMenu,
+  MobileMenuIcon,
+  NavBar,
+  NavList,
+  NextButton,
+} from "./CertificateMenu.styles";
 
 interface CertificateMenuProps {
   onSelect: (id: number) => void;
@@ -34,55 +44,33 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   };
 
   return (
-    <header>
-      <nav className="nav-bar">
-        <div className="logo">
+    <Container>
+      <NavBar>
+        <Logo>
           <img
             className="img"
             src="./src/assets/avatar/avatarFono.jpg"
-            alt="Logo"
+            alt="Logotipo"
           />
-        </div>
+        </Logo>
 
-        <div className={`nav-list`}>
+        <NavList>
           {!menuOpen && (
             <div>
-              <button
-                style={{
-                  border: "none",
-                  padding: "10px",
-                  borderRadius: "5px",
-                  backgroundColor: "#0187a7",
-                }}
-                onClick={handlePrevious}
-              >
-                Anterior
-              </button>
+              <NextButton onClick={handlePrevious}>Anterior</NextButton>
               <span style={{ padding: "0 1rem" }}>
                 Certificado {currentCertificate}
               </span>
-              <button
-                style={{
-                  border: "none",
-                  padding: "10px",
-                  borderRadius: "5px",
-                  backgroundColor: "#0187a7",
-                }}
-                onClick={handleNext}
-              >
-                Próximo
-              </button>
+              <NextButton onClick={handleNext}>Próximo</NextButton>
             </div>
           )}
-        </div>
+        </NavList>
 
-        <div className={`login-button ${menuOpen ? "open" : ""}`}>
-          <button>
-            <Link to={"/"}>Voltar</Link>
-          </button>
-        </div>
+        <BackButton className={`${menuOpen ? "open" : ""}`}>
+          <Link to={"/"}>Voltar</Link>
+        </BackButton>
 
-        <div className="mobile-menu-icon">
+        <MobileMenuIcon>
           <button onClick={toggleMenu}>
             <img
               className="icon"
@@ -94,10 +82,10 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
               alt="Menu"
             />
           </button>
-        </div>
-      </nav>
+        </MobileMenuIcon>
+      </NavBar>
 
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+      <MobileMenu className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <div
           style={{
             display: "flex",
@@ -105,40 +93,20 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             alignItems: "center",
           }}
         >
-          <button
-            style={{
-              border: "none",
-              padding: "10px",
-              borderRadius: "5px",
-              backgroundColor: "#0187a7",
-            }}
-            onClick={handlePrevious}
-          >
-            Anterior
-          </button>
+          <NextButton onClick={handlePrevious}>Anterior</NextButton>
+
           <span style={{ padding: "0 1rem" }}>
             Certificado {currentCertificate}
           </span>
-          <button
-            style={{
-              border: "none",
-              padding: "10px",
-              borderRadius: "5px",
-              backgroundColor: "#0187a7",
-            }}
-            onClick={handleNext}
-          >
-            Próximo
-          </button>
+
+          <NextButton onClick={handleNext}>Próximo</NextButton>
         </div>
 
-        <div className="login-button">
-          <button>
-            <Link to={"/"}>Voltar</Link>
-          </button>
-        </div>
-      </div>
-    </header>
+        <BackButton>
+          <Link to={"/"}>Voltar</Link>
+        </BackButton>
+      </MobileMenu>
+    </Container>
   );
 };
 
