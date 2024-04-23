@@ -10,6 +10,8 @@ import {
   NavList,
   NextButton,
 } from "./CertificateMenu.styles";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 interface CertificateMenuProps {
   onSelect: (id: number) => void;
@@ -57,21 +59,18 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
     <Container>
       <NavBar>
         <Logo>
-          <img
-            className="img"
-            src="./src/assets/avatar/avatarFono.jpg"
-            alt="Logotipo"
-          />
+         Colo de Fono
         </Logo>
 
         <NavList>
           {!menuOpen && (
             <div>
-              <NextButton onClick={handlePrevious}>Anterior</NextButton>
+              <FaCircleArrowLeft onClick={handlePrevious} size={25}/>
+             
               <span style={{ padding: "0 1rem" }}>
                 Certificado {currentCertificate}
               </span>
-              <NextButton onClick={handleNext}>Próximo</NextButton>
+              <FaCircleArrowRight onClick={handleNext} size={25}/>
             </div>
           )}
         </NavList>

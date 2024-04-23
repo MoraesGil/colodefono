@@ -67,8 +67,10 @@ export const NextButton = styled.button`
 `;
 
 export const Container = styled.header`
-  background-color: #f1dec5;
-  box-shadow: 0px 3px 10px #e0dabf;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 25px;
 
   @media screen and (max-width: 730px) {
     padding: 1.5rem 4rem;
