@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import "./ResponsiveMenu.css";
 import {
   BackButton,
   Container,
