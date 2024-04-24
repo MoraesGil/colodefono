@@ -53,4 +53,60 @@ export const Container = styled.header`
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
+
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+`;
+
+// --------------- LATERAL MENU
+
+export const SidebarContainer = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+
+  @media screen and (max-width: 1001px) {
+    display: none;
+  }
+`;
+
+export const MenuList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+export const MenuItem = styled.li`
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: #444;
+  }
+`;
+
+export const BackButtonSide = styled.button`
+  padding: 10px;
+  background-color: #555;
+  border: none;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #666;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
 `;

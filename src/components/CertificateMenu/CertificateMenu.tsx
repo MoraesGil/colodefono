@@ -2,10 +2,14 @@ import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import {
   BackButton,
+  BackButtonSide,
   Container,
   Logo,
+  MenuItem,
+  MenuList,
   NavBar,
   NavList,
+  SidebarContainer,
 } from "./CertificateMenu.styles";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
@@ -39,6 +43,20 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   };
 
   return (
+    <>
+      <SidebarContainer>
+        <div>
+          <h2>Certificados</h2>
+          <MenuList>
+            <MenuItem>Item 1</MenuItem>
+            <MenuItem>Item 2</MenuItem>
+            <MenuItem>Item 3</MenuItem>
+          </MenuList>
+        </div>
+        <BackButtonSide>
+          <Link to="/">Voltar</Link>
+        </BackButtonSide>
+      </SidebarContainer>
     <Container>
       <NavBar>
         <Logo>
@@ -50,18 +68,28 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             <FaCircleArrowLeft size={25} />
           </a>
 
-          <span>{label}</span>
+          <NavList>
+            <a onClick={handlePreviousCertificate}>
+              <FaCircleArrowLeft size={25} />
+            </a>
 
           <a onClick={handleNextCertificate} className={currentCertificate === certificateCount ? "displayNone" : ""}>
             <FaCircleArrowRight size={25} />
           </a>
         </NavList>
+            <span>{label}</span>
 
-        <BackButton>
-          <Link to="/">Voltar</Link>
-        </BackButton>
-      </NavBar>
-    </Container>
+            <a onClick={handleNextCertificate}>
+              <FaCircleArrowRight size={25} />
+            </a>
+          </NavList>
+
+          <BackButton>
+            <Link to="/">Voltar</Link>
+          </BackButton>
+        </NavBar>
+      </Container>
+    </>
   );
 };
 

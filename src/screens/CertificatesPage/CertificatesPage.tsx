@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
   CertificateImagesWrapper,
+  ContentImagesSide,
+  ContentSide,
   ContentWrapper,
 } from "./CertificatesPage.styles";
 import Modal from "../../components/Modal/Modal";
@@ -36,6 +38,21 @@ const CertificatesPage: React.FC = () => {
         label={category}
         id={id}
       />
+
+      <ContentSide>
+        <ContentImagesSide>
+          {images.map((img, index) => (
+            <div key={index}>
+              <img
+                src={img}
+                alt={`Certificado ${index}`}
+                onClick={() => handleImageClick(img)}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
+          ))}
+        </ContentImagesSide>
+      </ContentSide>
 
       <ContentWrapper>
         <CertificateImagesWrapper>
