@@ -11,10 +11,16 @@ import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 interface CertificateMenuProps {
   lengthArray: number;
+  label?: any;
+  id?: any;
 }
 
-const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
-  const [currentCertificate, setCurrentCertificate] = useState(1);
+const CertificateMenu: React.FC<CertificateMenuProps> = ({
+  lengthArray,
+  label,
+  id,
+}) => {
+  const [currentCertificate, setCurrentCertificate] = useState(id);
   const navigate = useNavigate();
 
   const certificateCount = lengthArray;
@@ -42,7 +48,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
             <FaCircleArrowLeft size={25} />
           </a>
 
-          <span>Certificado {currentCertificate}</span>
+          <span>{label}</span>
 
           <a onClick={handleNextCertificate}>
             <FaCircleArrowRight size={25} />

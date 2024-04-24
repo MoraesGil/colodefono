@@ -31,7 +31,11 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu lengthArray={categoryKeys.length} />
+      <CertificateMenu
+        lengthArray={categoryKeys.length}
+        label={category}
+        id={id}
+      />
 
       <ContentWrapper>
         <CertificateImagesWrapper>
