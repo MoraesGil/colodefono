@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import {
   BackButton,
@@ -11,25 +11,31 @@ import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 interface CertificateMenuProps {
   lengthArray: number;
+  label: any;
+  id: any;
 }
 
-const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
-  const initialCertificate = 1;
-
-  const [currentCertificate, setCurrentCertificate] =
-    useState(initialCertificate);
+const CertificateMenu: React.FC<CertificateMenuProps> = ({
+  lengthArray,
+  label,
+  id,
+}) => {
+  const [currentCertificate, setCurrentCertificate] = useState(id);
+  const navigate = useNavigate();
 
   const certificateCount = lengthArray;
 
   const handleNextCertificate = () => {
     const next = (currentCertificate % certificateCount) + 1;
     setCurrentCertificate(next);
+    navigate(`/certificate/${next}`);
   };
 
   const handlePreviousCertificate = () => {
     const previous =
       ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
     setCurrentCertificate(previous);
+    navigate(`/certificate/${previous}`);
   };
 
   return (
@@ -38,21 +44,15 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
         <Logo className="pd10">Colo de Fono</Logo>
 
         <NavList>
-          <Link
-            to={`/certificate/${currentCertificate}`}
-            onClick={handlePreviousCertificate}
-          >
+          <a onClick={handlePreviousCertificate}>
             <FaCircleArrowLeft size={25} />
-          </Link>
+          </a>
 
-          <span>Certificado {currentCertificate}</span>
+          <span>{label}</span>
 
-          <Link
-            to={`/certificate/${currentCertificate}`}
-            onClick={handleNextCertificate}
-          >
+          <a onClick={handleNextCertificate}>
             <FaCircleArrowRight size={25} />
-          </Link>
+          </a>
         </NavList>
 
         <BackButton>
