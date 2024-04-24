@@ -5,13 +5,16 @@ import {
   CertificateImagesWrapper,
   ContentWrapper,
 } from "./CertificatesPage.styles";
-import { certificateImages } from "./CertificatePaths";
 import Modal from "../../components/Modal/Modal";
+import { certificateImages } from "./CertificatePaths";
 
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const certificateId = parseInt(id || "1");
-  const images = certificateImages[certificateId] || [];
+  const certificateIndex = parseInt(id || "1", 10) - 1;
+
+  const categoryKeys = Object.keys(certificateImages);
+  const category = categoryKeys[certificateIndex % categoryKeys.length];
+  const images = certificateImages[category];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -28,7 +31,7 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu lengthArray={Object.keys(certificateImages).length} />
+      <CertificateMenu lengthArray={categoryKeys.length} />
 
       <ContentWrapper>
         <CertificateImagesWrapper>
@@ -36,7 +39,7 @@ const CertificatesPage: React.FC = () => {
             <div key={index}>
               <img
                 src={img}
-                alt={`Certificado ${certificateId}`}
+                alt={`Certificado ${index}`}
                 onClick={() => handleImageClick(img)}
                 style={{ cursor: "pointer" }}
               />

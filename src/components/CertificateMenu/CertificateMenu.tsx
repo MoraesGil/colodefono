@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import {
   BackButton,
@@ -14,24 +14,22 @@ interface CertificateMenuProps {
 }
 
 const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
-  const { id } = useParams<{ id: string }>();
-  const initialCertificate = parseInt(id || "1", 10);
+  const initialCertificate = 1;
 
   const [currentCertificate, setCurrentCertificate] =
     useState(initialCertificate);
 
   const certificateCount = lengthArray;
 
-  const handleNext = () => {
-    const nextCertificate = (currentCertificate % certificateCount) + 1;
-    setCurrentCertificate(nextCertificate);
+  const handleNextCertificate = () => {
+    const next = (currentCertificate % certificateCount) + 1;
+    setCurrentCertificate(next);
   };
 
-  const handlePrevious = () => {
-    const prevCertificate =
+  const handlePreviousCertificate = () => {
+    const previous =
       ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
-
-    setCurrentCertificate(prevCertificate);
+    setCurrentCertificate(previous);
   };
 
   return (
@@ -42,14 +40,17 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
         <NavList>
           <Link
             to={`/certificate/${currentCertificate}`}
-            onClick={handlePrevious}
+            onClick={handlePreviousCertificate}
           >
             <FaCircleArrowLeft size={25} />
           </Link>
 
           <span>Certificado {currentCertificate}</span>
 
-          <Link to={`/certificate/${currentCertificate}`} onClick={handleNext}>
+          <Link
+            to={`/certificate/${currentCertificate}`}
+            onClick={handleNextCertificate}
+          >
             <FaCircleArrowRight size={25} />
           </Link>
         </NavList>
