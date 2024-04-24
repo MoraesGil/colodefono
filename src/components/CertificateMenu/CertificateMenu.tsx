@@ -11,8 +11,8 @@ import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 interface CertificateMenuProps {
   lengthArray: number;
-  label?: any;
-  id?: any;
+  label: any;
+  id: any;
 }
 
 const CertificateMenu: React.FC<CertificateMenuProps> = ({
