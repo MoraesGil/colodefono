@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/certificates" element={<CertificatePage />} />
+          <Route path="/certificate/:id" element={<CertificatePage />} />
         </Routes>
       </Router>
     </ThemeProvider>
