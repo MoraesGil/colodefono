@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useState } from "react";
 import {
   BackButton,
@@ -10,40 +10,28 @@ import {
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 interface CertificateMenuProps {
-  onSelect: (id: number) => void;
   lengthArray: number;
 }
 
-const CertificateMenu: React.FC<CertificateMenuProps> = ({
-  onSelect,
-  lengthArray,
-}) => {
-  const [currentCertificate, setCurrentCertificate] = useState(0);
+const CertificateMenu: React.FC<CertificateMenuProps> = ({ lengthArray }) => {
+  const { id } = useParams<{ id: string }>();
+  const initialCertificate = parseInt(id || "1", 10);
+
+  const [currentCertificate, setCurrentCertificate] =
+    useState(initialCertificate);
 
   const certificateCount = lengthArray;
 
   const handleNext = () => {
     const nextCertificate = (currentCertificate % certificateCount) + 1;
     setCurrentCertificate(nextCertificate);
-    onSelect(nextCertificate);
   };
 
   const handlePrevious = () => {
-    if (currentCertificate === 0) {
-      const prevCertificate =
-        ((currentCertificate - 1 + certificateCount) % certificateCount) + 1;
+    const prevCertificate =
+      ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
 
-      setCurrentCertificate(prevCertificate);
-      onSelect(prevCertificate);
-    }
-
-    if (currentCertificate > 0) {
-      const prevCertificate =
-        ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
-
-      setCurrentCertificate(prevCertificate);
-      onSelect(prevCertificate);
-    }
+    setCurrentCertificate(prevCertificate);
   };
 
   return (
@@ -52,21 +40,22 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
         <Logo className="pd10">Colo de Fono</Logo>
 
         <NavList>
-          
-            <FaCircleArrowLeft onClick={handlePrevious} size={25} />
+          <Link
+            to={`/certificate/${currentCertificate}`}
+            onClick={handlePrevious}
+          >
+            <FaCircleArrowLeft size={25} />
+          </Link>
 
-         
-              <span>
-                Certificado {currentCertificate}
-              </span>
-            
+          <span>Certificado {currentCertificate}</span>
 
-            <FaCircleArrowRight onClick={handleNext} size={25} />
-         
+          <Link to={`/certificate/${currentCertificate}`} onClick={handleNext}>
+            <FaCircleArrowRight size={25} />
+          </Link>
         </NavList>
 
         <BackButton>
-          <Link to={"/"}>Voltar</Link>
+          <Link to="/">Voltar</Link>
         </BackButton>
       </NavBar>
     </Container>

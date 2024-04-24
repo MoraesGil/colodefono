@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
   CertificateImagesWrapper,
@@ -8,9 +9,10 @@ import { certificateImages } from "./CertificatePaths";
 import Modal from "../../components/Modal/Modal";
 
 const CertificatesPage: React.FC = () => {
-  const [selectedCertificate, setSelectedCertificate] = useState<number | null>(
-    null
-  );
+  const { id } = useParams<{ id: string }>();
+  const certificateId = parseInt(id || "1");
+  const images = certificateImages[certificateId] || [];
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -24,35 +26,23 @@ const CertificatesPage: React.FC = () => {
     setSelectedImage(null);
   };
 
-  const lengthArray = Object.keys(certificateImages).length;
-
   return (
     <div>
-      <CertificateMenu
-        lengthArray={lengthArray}
-        onSelect={(id) => setSelectedCertificate(id)}
-      />
+      <CertificateMenu lengthArray={Object.keys(certificateImages).length} />
 
       <ContentWrapper>
-        {selectedCertificate && (
-          <CertificateImagesWrapper>
-            
-            {certificateImages[selectedCertificate].map((img, index) => (
-              <div>
+        <CertificateImagesWrapper>
+          {images.map((img, index) => (
+            <div key={index}>
               <img
-                key={index}
                 src={img}
-                alt={`Certificado ${selectedCertificate}`}
+                alt={`Certificado ${certificateId}`}
                 onClick={() => handleImageClick(img)}
-                style={{ cursor: "pointer"}}
+                style={{ cursor: "pointer" }}
               />
-              </div>
-            ))}
-          </CertificateImagesWrapper>
-        )}
-        {!selectedCertificate && (
-          <p>Selecione um certificado para ver sua imagem</p>
-        )}
+            </div>
+          ))}
+        </CertificateImagesWrapper>
       </ContentWrapper>
 
       {isModalOpen && (
