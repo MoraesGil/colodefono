@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
   CertificateImagesWrapper,
@@ -12,6 +12,14 @@ import { certificateImages } from "./CertificatePaths";
 
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (id === "0" || !id || parseInt(id) > 14) {
+      navigate("/certificate/1");
+    }
+  }, [id, navigate]);
+
   const certificateIndex = parseInt(id || "1", 10) - 1;
 
   const categoryKeys = Object.keys(certificateImages);
