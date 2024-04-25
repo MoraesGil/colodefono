@@ -9,7 +9,7 @@ const IconButtons: React.FC = () => {
         <FaInstagram />
       </a>
 
-      <a href="https://www.linkedin.com" target="_blank">
+      <a href="https://www.linkedin.com/in/valeria-moraes-fonoaudiologia/" target="_blank">
         <FaLinkedin />
       </a>
 
