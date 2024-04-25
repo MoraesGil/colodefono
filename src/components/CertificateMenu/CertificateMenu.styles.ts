@@ -30,6 +30,9 @@ export const NavList = styled.div`
     padding-left: 10px;
     padding-right: 10px;
   }
+  .displayNone {
+    display: none;
+  }
 `;
 
 export const BackButton = styled.button`
