@@ -62,29 +62,26 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
           <Link to="/">Voltar</Link>
         </BackButtonSide>
       </SidebarContainer>
-    <Container>
-      <NavBar>
-        <Logo>
-          <Link to="/">Colo de Fono</Link>
-        </Logo>
-
-        <NavList>
-          <a onClick={handlePreviousCertificate} className={currentCertificate === 1 ? "displayNone" : ""}>
-            <FaCircleArrowLeft size={25} />
-          </a>
+      <Container>
+        <NavBar>
+          <Logo>
+            <Link to="/">Colo de Fono</Link>
+          </Logo>
 
           <NavList>
-            <a onClick={handlePreviousCertificate}>
+            <a
+              onClick={handlePreviousCertificate}
+              className={currentCertificate === 1 ? "displayNone" : ""}
+            >
               <FaCircleArrowLeft size={25} />
             </a>
-
-          <a onClick={handleNextCertificate} className={currentCertificate === certificateCount ? "displayNone" : ""}>
-            <FaCircleArrowRight size={25} />
-          </a>
-        </NavList>
             <span>{label}</span>
-
-            <a onClick={handleNextCertificate}>
+            <a
+              onClick={handleNextCertificate}
+              className={
+                currentCertificate === certificateCount ? "displayNone" : ""
+              }
+            >
               <FaCircleArrowRight size={25} />
             </a>
           </NavList>
