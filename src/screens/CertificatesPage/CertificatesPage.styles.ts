@@ -41,8 +41,6 @@ export const CertificateImagesWrapper = styled.div`
   }
 `;
 
-// side menu -------------
-
 export const ContentSide = styled.div`
   flex: 1;
   display: flex;

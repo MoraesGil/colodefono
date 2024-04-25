@@ -59,8 +59,6 @@ export const Container = styled.header`
   }
 `;
 
-// --------------- LATERAL MENU
-
 export const SidebarContainer = styled.div`
   position: fixed;
   left: 0;
