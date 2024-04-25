@@ -82,6 +82,14 @@ export const MenuList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+
+  .active {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s, transform 0.6s;
+  }
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const MenuItem = styled.li`
@@ -89,11 +97,7 @@ export const MenuItem = styled.li`
   cursor: pointer;
   &:hover {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  a {
-    text-decoration: none;
-  }
+    transform: scale(1.05);  }
 `;
 
 export const BackButtonSide = styled.button`
