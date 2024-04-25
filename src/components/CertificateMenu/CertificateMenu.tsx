@@ -41,7 +41,9 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   return (
     <Container>
       <NavBar>
-        <Logo className="pd10">Colo de Fono</Logo>
+        <Logo className="pd10">
+          <Link to="/">Colo de Fono</Link>
+        </Logo>
 
         <NavList>
           <a onClick={handlePreviousCertificate}>

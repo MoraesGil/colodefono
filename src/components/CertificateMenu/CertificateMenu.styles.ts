@@ -6,10 +6,6 @@ export const NavBar = styled.nav`
   align-items: center;
   padding: 1.5rem 6rem;
 
-  .pd10 {
-    padding: 10px;
-  }
-
   @media screen and (max-width: 1000px) {
     flex-direction: column;
     justify-content: center;
@@ -19,6 +15,10 @@ export const NavBar = styled.nav`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
+  padding: 10px;
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const NavList = styled.div`
@@ -30,7 +30,6 @@ export const NavList = styled.div`
     padding-left: 10px;
     padding-right: 10px;
   }
-  
 `;
 
 export const BackButton = styled.button`
