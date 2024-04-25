@@ -12,6 +12,7 @@ import {
   SidebarContainer,
 } from "./CertificateMenu.styles";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
+import { certificateImages } from "../../screens/CertificatesPage/CertificatePaths";
 
 interface CertificateMenuProps {
   lengthArray: number;
@@ -48,9 +49,13 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
         <div>
           <h2>Certificados</h2>
           <MenuList>
-            <MenuItem>Item 1</MenuItem>
-            <MenuItem>Item 2</MenuItem>
-            <MenuItem>Item 3</MenuItem>
+            {Object.keys(certificateImages).map((category, index) => {
+              return (
+                <MenuItem key={index}>
+                  <Link to={`/certificate/${index + 1}`}>{category}</Link>
+                </MenuItem>
+              );
+            })}
           </MenuList>
         </div>
         <BackButtonSide>

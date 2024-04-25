@@ -67,12 +67,13 @@ export const SidebarContainer = styled.div`
   top: 0;
   height: 100vh;
   width: 250px;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
+  overflow-y: auto;
 
   @media screen and (max-width: 1001px) {
     display: none;
@@ -89,13 +90,17 @@ export const MenuItem = styled.li`
   padding: 8px;
   cursor: pointer;
   &:hover {
-    background-color: #444;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 
 export const BackButtonSide = styled.button`
   padding: 10px;
-  background-color: #555;
+  background-color: #0187a7;
   border: none;
   color: white;
   cursor: pointer;
