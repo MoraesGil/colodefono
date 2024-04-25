@@ -10,7 +10,7 @@ const LinkList: React.FC = () => {
         to={"https://calendly.com/colodefono-consulta/30min"}
         target="_blank"
       >
-        Colo de fono, agende um papo
+        Colo de fono, agende uma availiação
       </Link>
     </Container>
   );
