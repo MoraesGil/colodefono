@@ -51,16 +51,19 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
           <MenuList>
             {Object.keys(certificateImages).map((category, index) => {
               return (
-                <MenuItem key={index}>
-                  <Link to={`/certificate/${index + 1}`}>{category}</Link>
-                </MenuItem>
+                <Link
+                  to={`/certificate/${index + 1}`}
+                  onClick={() => setCurrentCertificate(index + 1)}
+                >
+                  <MenuItem key={category} className={currentCertificate === index + 1 ? "active" : ""}>{category}</MenuItem>
+                </Link>
               );
             })}
           </MenuList>
         </div>
-        <BackButtonSide>
-          <Link to="/">Voltar</Link>
-        </BackButtonSide>
+        <Link to="/">
+          <BackButtonSide>Voltar</BackButtonSide>
+        </Link>
       </SidebarContainer>
       <Container>
         <NavBar>
