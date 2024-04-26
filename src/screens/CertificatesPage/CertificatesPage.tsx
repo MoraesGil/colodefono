@@ -15,15 +15,17 @@ const CertificatesPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (id === "0" || !id || parseInt(id) > 14) {
-      navigate("/certificate/1");
+    const certificateArray = Object.keys(certificateImages);
+
+    if (!id || !certificateArray[Number(id)] || Number(id) - 1 < 0) {
+      navigate(`/certificate/${1}`);
     }
-  }, [id, navigate]);
+  }, []);
 
   const certificateIndex = parseInt(id || "1", 10) - 1;
 
   const categoryKeys = Object.keys(certificateImages);
-  const category = categoryKeys[certificateIndex % categoryKeys.length];
+  const category = categoryKeys[certificateIndex];
   const images = certificateImages[category];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
