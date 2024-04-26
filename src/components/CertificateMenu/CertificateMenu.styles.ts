@@ -1,37 +1,11 @@
 import styled from "styled-components";
 
-export const NavBar = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 6rem;
-
-  @media screen and (max-width: 1000px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-`;
-
 export const Logo = styled.div`
   display: flex;
   align-items: center;
   padding: 10px;
   a {
     text-decoration: none;
-  }
-`;
-
-export const NavList = styled.div`
-  display: flex;
-  align-items: "center";
-  justify-content: "space-around";
-  span {
-    display: block;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .displayNone {
-    display: none;
   }
 `;
 
@@ -46,16 +20,6 @@ export const BackButton = styled.button`
     color: white;
     font-weight: 500;
     font-size: 1.1rem;
-  }
-`;
-
-export const Container = styled.header`
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 25px;
-
-  @media screen and (min-width: 1000px) {
-    display: none;
   }
 `;
 
@@ -97,7 +61,8 @@ export const MenuItem = styled.li`
   cursor: pointer;
   &:hover {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);  }
+    transform: scale(1.05);
+  }
 `;
 
 export const BackButtonSide = styled.button`
@@ -116,4 +81,56 @@ export const BackButtonSide = styled.button`
     font-weight: 500;
     font-size: 1.1rem;
   }
+`;
+
+export const CarouselContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+`;
+
+export const Content = styled.div`
+  max-width: 500px;
+  height: 180px;
+  width: 100%;
+`;
+
+export const CarouselContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  height: 100px;
+
+  .none {
+    display: none;
+  }
+`;
+
+export const HandleContent = styled.div`
+  height: 100px;
+  align-items: center;
+  display: flex;
+`;
+
+export const TopContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5;
+`;
+
+export const CarouselText = styled.div`
+  font-size: 1.5em;
+  text-align: center;
+  flex: 1;
 `;
