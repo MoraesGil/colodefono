@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 import {
   BackButton,
   BackButtonSide,
-  Container,
+  CarouselContainer,
+  CarouselContent,
+  CarouselText,
+  Content,
   Logo,
   MenuItem,
   MenuList,
-  NavBar,
-  NavList,
   SidebarContainer,
+  TopContent,
 } from "./CertificateMenu.styles";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { certificateImages } from "../../screens/CertificatesPage/CertificatePaths";
@@ -87,20 +89,25 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
           <BackButtonSide>Voltar</BackButtonSide>
         </Link>
       </SidebarContainer>
-      <Container>
-        <NavBar>
-          <Logo>
-            <Link to="/">Colo de Fono</Link>
-          </Logo>
 
-          <NavList>
+      <CarouselContainer>
+        <Content>
+          <TopContent>
+            <Logo>
+              <Link to="/">Colo de Fono</Link>
+            </Logo>
+            <BackButton>
+              <Link to="/">Voltar</Link>
+            </BackButton>
+          </TopContent>
+          <CarouselContent>
             <a
               onClick={handlePreviousCertificate}
               className={currentCertificate === 1 ? "displayNone" : ""}
             >
               <FaCircleArrowLeft size={25} />
             </a>
-            <span>{label}</span>
+            <CarouselText>{label}</CarouselText>
             <a
               onClick={handleNextCertificate}
               className={
@@ -109,13 +116,9 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             >
               <FaCircleArrowRight size={25} />
             </a>
-          </NavList>
-
-          <BackButton>
-            <Link to="/">Voltar</Link>
-          </BackButton>
-        </NavBar>
-      </Container>
+          </CarouselContent>
+        </Content>
+      </CarouselContainer>
     </>
   );
 };
