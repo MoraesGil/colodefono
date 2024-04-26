@@ -111,7 +111,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
               </a>
             </HandleContent>
             <CarouselText>{label}</CarouselText>
-            <HandleContent onClick={handlePreviousCertificate}>
+            <HandleContent onClick={handleNextCertificate}>
               <a
                 onClick={handleNextCertificate}
                 className={
