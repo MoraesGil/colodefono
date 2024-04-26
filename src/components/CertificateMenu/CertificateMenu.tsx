@@ -7,6 +7,7 @@ import {
   CarouselContent,
   CarouselText,
   Content,
+  HandleContent,
   Logo,
   MenuItem,
   MenuList,
@@ -101,21 +102,25 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             </BackButton>
           </TopContent>
           <CarouselContent>
-            <a
-              onClick={handlePreviousCertificate}
-              className={currentCertificate === 1 ? "displayNone" : ""}
-            >
-              <FaCircleArrowLeft size={25} />
-            </a>
+            <HandleContent onClick={handlePreviousCertificate}>
+              <a
+                onClick={handlePreviousCertificate}
+                className={currentCertificate === 1 ? "displayNone" : ""}
+              >
+                <FaCircleArrowLeft size={25} />
+              </a>
+            </HandleContent>
             <CarouselText>{label}</CarouselText>
-            <a
-              onClick={handleNextCertificate}
-              className={
-                currentCertificate === certificateCount ? "displayNone" : ""
-              }
-            >
-              <FaCircleArrowRight size={25} />
-            </a>
+            <HandleContent onClick={handlePreviousCertificate}>
+              <a
+                onClick={handleNextCertificate}
+                className={
+                  currentCertificate === certificateCount ? "displayNone" : ""
+                }
+              >
+                <FaCircleArrowRight size={25} />
+              </a>
+            </HandleContent>
           </CarouselContent>
         </Content>
       </CarouselContainer>

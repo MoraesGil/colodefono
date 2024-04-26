@@ -113,6 +113,12 @@ export const CarouselContent = styled.div`
   height: 100px;
 `;
 
+export const HandleContent = styled.div`
+  height: 100px;
+  align-items: center;
+  display: flex;
+`;
+
 export const TopContent = styled.div`
   display: flex;
   justify-content: space-between;
