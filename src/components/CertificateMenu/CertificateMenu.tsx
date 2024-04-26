@@ -105,7 +105,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             <HandleContent onClick={handlePreviousCertificate}>
               <a
                 onClick={handlePreviousCertificate}
-                className={currentCertificate === 1 ? "displayNone" : ""}
+                className={currentCertificate === 1 ? "none" : ""}
               >
                 <FaCircleArrowLeft size={25} />
               </a>
@@ -115,7 +115,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
               <a
                 onClick={handleNextCertificate}
                 className={
-                  currentCertificate === certificateCount ? "displayNone" : ""
+                  currentCertificate === certificateCount ? "none" : ""
                 }
               >
                 <FaCircleArrowRight size={25} />

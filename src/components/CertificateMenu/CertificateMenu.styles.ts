@@ -111,6 +111,10 @@ export const CarouselContent = styled.div`
   align-items: center;
   margin-top: 20px;
   height: 100px;
+
+  .none {
+    display: none;
+  }
 `;
 
 export const HandleContent = styled.div`
