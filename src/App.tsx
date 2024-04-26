@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/certificate/:id" element={<CertificatesPage />} />
-          <Route path="*" element={<HomePage />} />
         </Routes>
       </Router>
     </ThemeProvider>

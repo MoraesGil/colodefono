@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
   CertificateImagesWrapper,
@@ -12,21 +12,27 @@ import { certificateImages } from "./CertificatePaths";
 
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const certificateArray = Object.keys(certificateImages);
+  const valueId = id ? id : 1;
 
-    if (!id || !certificateArray[Number(id)] || Number(id) - 1 < 0) {
-      navigate(`/certificate/${1}`);
-    }
-  }, []);
+  const certificatesLength = Object.keys(certificateImages).length;
 
-  const certificateIndex = parseInt(id || "1", 10) - 1;
+  let idValue = Number(valueId);
 
-  const categoryKeys = Object.keys(certificateImages);
-  const category = categoryKeys[certificateIndex];
-  const images = certificateImages[category];
+  if (
+    isNaN(idValue) ||
+    idValue < 1 ||
+    idValue > certificatesLength ||
+    !idValue
+  ) {
+    idValue = 1;
+  }
+
+  const certificateIndex = idValue - 1;
+
+  const labelKeys = Object.keys(certificateImages);
+  const label = labelKeys[certificateIndex];
+  const images = certificateImages[label];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -43,11 +49,7 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu
-        lengthArray={categoryKeys.length}
-        label={category}
-        id={id}
-      />
+      <CertificateMenu lengthArray={labelKeys.length} label={label} id={id} />
 
       <ContentSide>
         <ContentImagesSide>

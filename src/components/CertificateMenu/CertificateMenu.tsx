@@ -72,7 +72,12 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
                   to={`/certificate/${index + 1}`}
                   onClick={() => setCurrentCertificate(index + 1)}
                 >
-                  <MenuItem key={category} className={currentCertificate === index + 1 ? "active" : ""}>{category}</MenuItem>
+                  <MenuItem
+                    key={category}
+                    className={currentCertificate === index + 1 ? "active" : ""}
+                  >
+                    {category}
+                  </MenuItem>
                 </Link>
               );
             })}
