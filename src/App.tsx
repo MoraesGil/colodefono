@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "./theme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./screens/HomePage";
-import CertificatePage from "./screens/CertificatesPage";
+import CertificatesPage from "./screens/CertificatesPage";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/certificate/:id" element={<CertificatePage />} />
+          <Route path="/certificate/:id" element={<CertificatesPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </Router>
     </ThemeProvider>

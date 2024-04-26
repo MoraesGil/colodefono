@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BackButton,
   BackButtonSide,
@@ -43,6 +43,23 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
     navigate(`/certificate/${previous}`);
   };
 
+  const handleKey = (event: KeyboardEvent) => {
+    if (event.key === "ArrowLeft") {
+      handlePreviousCertificate();
+    }
+
+    if (event.key === "ArrowRight") {
+      handleNextCertificate();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [handleKey]);
+
   return (
     <>
       <SidebarContainer>
@@ -55,7 +72,12 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
                   to={`/certificate/${index + 1}`}
                   onClick={() => setCurrentCertificate(index + 1)}
                 >
-                  <MenuItem key={category} className={currentCertificate === index + 1 ? "active" : ""}>{category}</MenuItem>
+                  <MenuItem
+                    key={category}
+                    className={currentCertificate === index + 1 ? "active" : ""}
+                  >
+                    {category}
+                  </MenuItem>
                 </Link>
               );
             })}

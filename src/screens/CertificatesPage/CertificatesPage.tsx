@@ -12,11 +12,27 @@ import { certificateImages } from "./CertificatePaths";
 
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const certificateIndex = parseInt(id || "1", 10) - 1;
 
-  const categoryKeys = Object.keys(certificateImages);
-  const category = categoryKeys[certificateIndex % categoryKeys.length];
-  const images = certificateImages[category];
+  const valueId = id ? id : 1;
+
+  const certificatesLength = Object.keys(certificateImages).length;
+
+  let idValue = Number(valueId);
+
+  if (
+    isNaN(idValue) ||
+    idValue < 1 ||
+    idValue > certificatesLength ||
+    !idValue
+  ) {
+    idValue = 1;
+  }
+
+  const certificateIndex = idValue - 1;
+
+  const labelKeys = Object.keys(certificateImages);
+  const label = labelKeys[certificateIndex];
+  const images = certificateImages[label];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -33,11 +49,7 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu
-        lengthArray={categoryKeys.length}
-        label={category}
-        id={id}
-      />
+      <CertificateMenu lengthArray={labelKeys.length} label={label} id={id} />
 
       <ContentSide>
         <ContentImagesSide>
