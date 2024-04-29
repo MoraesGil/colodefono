@@ -9,8 +9,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/certificate/:id" element={<CertificatesPage />} />
+          <Route path="/colodefono" element={<HomePage />} />
+          <Route
+            path="/colodefono/certificate/:id"
+            element={<CertificatesPage />}
+          />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Router>
