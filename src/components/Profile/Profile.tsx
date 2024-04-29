@@ -1,5 +1,6 @@
 import React from "react";
 import { ProfileContainer, ProfileImg, ProfileP } from "./styles";
+import perfil from "../../assets/avatar/avatarFono.jpg";
 
 const Profile: React.FC = (): JSX.Element => {
   return (
@@ -10,7 +11,7 @@ const Profile: React.FC = (): JSX.Element => {
       }}
     >
       <ProfileContainer>
-        <ProfileImg src="./src/assets/avatar/avatarFono.jpg" />
+        <ProfileImg src={perfil} />
       </ProfileContainer>
 
       <ProfileP>@colodefono</ProfileP>
