@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const LinkList: React.FC = () => {
   return (
     <Container>
-      <Link to={"/colodefono/certificate/1"}>Certificados</Link>
+      <Link to={"/colodefono/certificates/1"}>Certificados</Link>
       <Link
         to={"https://calendly.com/colodefono-consulta/30min"}
         target="_blank"

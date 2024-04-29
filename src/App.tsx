@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/colodefono" element={<HomePage />} />
           <Route
-            path="/colodefono/certificate/:id"
+            path="/colodefono/certificates/:id"
             element={<CertificatesPage />}
           />
           <Route path="*" element={<HomePage />} />
