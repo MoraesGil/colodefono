@@ -207,7 +207,6 @@ Error generating stack: `+i.message+`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 500px;
   height: 200px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -217,7 +216,6 @@ Error generating stack: `+i.message+`
     display: none;
   }
 `,ov=U.div`
-  max-width: 500px;
   height: 180px;
   width: 100%;
 `,uv=U.div`
