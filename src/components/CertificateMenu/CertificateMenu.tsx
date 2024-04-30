@@ -71,6 +71,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
           {organizedCertificateKeys.map((certificate, index) => {
             return (
               <Link
+                key={index}
                 to={`/certificates/${index + 1}`}
                 onClick={() => setCurrentCertificate(index + 1)}
               >
