@@ -60,7 +60,7 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu lengthArray={certificatesLength} label={label} id={id} />
+      <CertificateMenu lengthArray={certificatesLength} label={label} id={id} organizedCertificateKeys={organizedCertificateKeys} />
 
       <ContentSide>
         <ContentImagesSide>

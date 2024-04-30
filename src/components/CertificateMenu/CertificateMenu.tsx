@@ -15,18 +15,19 @@ import {
   TopContent,
 } from "./CertificateMenu.styles";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
-import { certificateImages } from "../../screens/CertificatesPage/CertificatePaths";
 
 interface CertificateMenuProps {
   lengthArray: number;
   label: any;
   id: any;
+  organizedCertificateKeys: string[];
 }
 
 const CertificateMenu: React.FC<CertificateMenuProps> = ({
   lengthArray,
   label,
   id,
+  organizedCertificateKeys,
 }) => {
   const [currentCertificate, setCurrentCertificate] = useState(id);
   const navigate = useNavigate();
@@ -69,17 +70,17 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
         <div>
           <h2>Certificados</h2>
           <MenuList>
-            {Object.keys(certificateImages).map((category, index) => {
+            {organizedCertificateKeys.map((certificate, index) => {
               return (
                 <Link
                   to={`/certificates/${index + 1}`}
                   onClick={() => setCurrentCertificate(index + 1)}
                 >
                   <MenuItem
-                    key={category}
+                    key={certificate}
                     className={currentCertificate === index + 1 ? "active" : ""}
                   >
-                    {category}
+                    {certificate}
                   </MenuItem>
                 </Link>
               );
