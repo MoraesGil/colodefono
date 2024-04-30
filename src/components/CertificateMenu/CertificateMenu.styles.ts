@@ -88,7 +88,6 @@ export const CarouselContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 500px;
   height: 200px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -100,7 +99,6 @@ export const CarouselContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 500px;
   height: 180px;
   width: 100%;
 `;
