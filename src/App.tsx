@@ -5,7 +5,7 @@ import HomePage from "./screens/HomePage";
 import CertificatesPage from "./screens/CertificatesPage";
 
 function App() {
-  const baseUrl = "/colodefono";
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <ThemeProvider theme={theme}>

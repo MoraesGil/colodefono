@@ -22,18 +22,13 @@ export const BackButton = styled.button`
     font-size: 1.1rem;
   }
 `;
-
 export const SidebarContainer = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
   height: 100vh;
-  width: 250px;
+  width: 25%;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 16px;
   overflow-y: auto;
 

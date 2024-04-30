@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
+  ButtonWrapper,
   CertificateImagesWrapper,
-  ContentImagesSide,
-  ContentSide,
+  CertificatesPageWrapper,
+  ContainerWrapper,
   ContentWrapper,
 } from "./CertificatesPage.styles";
 import Modal from "../../components/Modal/Modal";
@@ -12,6 +13,8 @@ import { certificateImages } from "./CertificatePaths";
 import { BackButtonSide } from "../../components/CertificateMenu/CertificateMenu.styles";
 
 const CertificatesPage: React.FC = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   const { id } = useParams<{ id: string }>();
   const valueId = id ? id : 1;
 
@@ -60,70 +63,47 @@ const CertificatesPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <CertificatesPageWrapper>
       <CertificateMenu
         lengthArray={certificatesLength}
         label={label}
         id={id}
         organizedCertificateKeys={organizedCertificateKeys}
       />
-
-      <ContentSide>
-        <div style={{ display: "flex" }}>
-          <ContentImagesSide>
-            {images.imagePaths.map((img, index) => (
+      <ContainerWrapper>
+        <ButtonWrapper>
+          <Link to="/">
+            <BackButtonSide>Voltar</BackButtonSide>
+          </Link>
+        </ButtonWrapper>
+        <ContentWrapper>
+          <CertificateImagesWrapper>
+            {images.imagePaths.map((imgPath, index) => (
               <div key={index}>
                 <img
-                  src={img}
+                  src={baseUrl + imgPath}
                   alt={`Certificado ${index}`}
-                  onClick={() => handleImageClick(img)}
+                  onClick={() => handleImageClick(imgPath)}
                   style={{ cursor: "pointer" }}
                 />
               </div>
             ))}
-          </ContentImagesSide>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              paddingTop: 15,
-              paddingRight: 15,
-            }}
-          >
-            <Link to="/">
-              <BackButtonSide>Voltar</BackButtonSide>
-            </Link>
-          </div>
-        </div>
-      </ContentSide>
-
-      <ContentWrapper>
-        <CertificateImagesWrapper>
-          {images.imagePaths.map((img, index) => (
-            <div key={index}>
-              <img
-                src={img}
-                alt={`Certificado ${index}`}
-                onClick={() => handleImageClick(img)}
-                style={{ cursor: "pointer" }}
-              />
-            </div>
-          ))}
-        </CertificateImagesWrapper>
-      </ContentWrapper>
+          </CertificateImagesWrapper>
+        </ContentWrapper>
+      </ContainerWrapper>
 
       {isModalOpen && (
         <Modal visible={isModalOpen} onClose={handleModalClose}>
           {selectedImage && (
             <img
-              src={selectedImage}
+              src={baseUrl + selectedImage}
               alt="Imagem do certificado"
               style={{ maxWidth: "100%" }}
             />
           )}
         </Modal>
       )}
-    </div>
+    </CertificatesPageWrapper>
   );
 };
 

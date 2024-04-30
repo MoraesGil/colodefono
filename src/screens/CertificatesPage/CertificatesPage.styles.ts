@@ -10,8 +10,42 @@ export const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (max-width: 1000px) {
+    width: 75%;
+  }
+`;
+
+export const CertificatesPageWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+`;
+
+export const ContainerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding-right: 15px;
+  padding-top: 15px;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    align-items: center;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
@@ -38,41 +72,5 @@ export const CertificateImagesWrapper = styled.div`
     div {
       width: 100%;
     }
-  }
-`;
-
-export const ContentSide = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 1001px) {
-    display: none;
-  }
-`;
-
-export const ContentImagesSide = styled.div`
-  margin-left: 200px;
-  padding: 10px;
-  height: 100vh;
-  overflow: auto;
-  padding-left: 50px;
-
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-
-  div {
-    justify-content: center;
-    padding: 10px;
-    width: 50%;
-  }
-  img {
-    padding-top: 10;
-    width: 100%;
-    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.5);
   }
 `;
