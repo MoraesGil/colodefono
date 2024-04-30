@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
   CertificateImagesWrapper,
@@ -9,6 +9,7 @@ import {
 } from "./CertificatesPage.styles";
 import Modal from "../../components/Modal/Modal";
 import { certificateImages } from "./CertificatePaths";
+import { BackButtonSide } from "../../components/CertificateMenu/CertificateMenu.styles";
 
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -60,21 +61,40 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu lengthArray={certificatesLength} label={label} id={id} organizedCertificateKeys={organizedCertificateKeys} />
+      <CertificateMenu
+        lengthArray={certificatesLength}
+        label={label}
+        id={id}
+        organizedCertificateKeys={organizedCertificateKeys}
+      />
 
       <ContentSide>
-        <ContentImagesSide>
-          {images.imagePaths.map((img, index) => (
-            <div key={index}>
-              <img
-                src={img}
-                alt={`Certificado ${index}`}
-                onClick={() => handleImageClick(img)}
-                style={{ cursor: "pointer" }}
-              />
-            </div>
-          ))}
-        </ContentImagesSide>
+        <div style={{ display: "flex" }}>
+          <ContentImagesSide>
+            {images.imagePaths.map((img, index) => (
+              <div key={index}>
+                <img
+                  src={img}
+                  alt={`Certificado ${index}`}
+                  onClick={() => handleImageClick(img)}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+            ))}
+          </ContentImagesSide>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              paddingTop: 15,
+              paddingRight: 15,
+            }}
+          >
+            <Link to="/">
+              <BackButtonSide>Voltar</BackButtonSide>
+            </Link>
+          </div>
+        </div>
       </ContentSide>
 
       <ContentWrapper>

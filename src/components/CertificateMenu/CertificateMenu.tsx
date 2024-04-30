@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import {
   BackButton,
-  BackButtonSide,
   CarouselContainer,
   CarouselContent,
   CarouselText,
@@ -67,29 +66,24 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   return (
     <>
       <SidebarContainer>
-        <div>
-          <h2>Certificados</h2>
-          <MenuList>
-            {organizedCertificateKeys.map((certificate, index) => {
-              return (
-                <Link
-                  to={`/certificates/${index + 1}`}
-                  onClick={() => setCurrentCertificate(index + 1)}
+        <h2>Certificados</h2>
+        <MenuList>
+          {organizedCertificateKeys.map((certificate, index) => {
+            return (
+              <Link
+                to={`/certificates/${index + 1}`}
+                onClick={() => setCurrentCertificate(index + 1)}
+              >
+                <MenuItem
+                  key={certificate}
+                  className={currentCertificate === index + 1 ? "active" : ""}
                 >
-                  <MenuItem
-                    key={certificate}
-                    className={currentCertificate === index + 1 ? "active" : ""}
-                  >
-                    {certificate}
-                  </MenuItem>
-                </Link>
-              );
-            })}
-          </MenuList>
-        </div>
-        <Link to="/">
-          <BackButtonSide>Voltar</BackButtonSide>
-        </Link>
+                  {certificate}
+                </MenuItem>
+              </Link>
+            );
+          })}
+        </MenuList>
       </SidebarContainer>
 
       <CarouselContainer>
