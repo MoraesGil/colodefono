@@ -16,6 +16,7 @@ import {
 } from "./CertificateMenu.styles";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { certificateImages } from "../../screens/CertificatesPage/CertificatePaths";
+import { baseUrl } from "../../App";
 
 interface CertificateMenuProps {
   lengthArray: number;
@@ -72,7 +73,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             {Object.keys(certificateImages).map((category, index) => {
               return (
                 <Link
-                  to={`/colodefono/certificates/${index + 1}`}
+                  to={`${baseUrl}/certificates/${index + 1}`}
                   onClick={() => setCurrentCertificate(index + 1)}
                 >
                   <MenuItem

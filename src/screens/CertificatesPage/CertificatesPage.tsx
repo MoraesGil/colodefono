@@ -12,13 +12,10 @@ import { certificateImages } from "./CertificatePaths";
 
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-
   const valueId = id ? id : 1;
-
   const certificatesLength = Object.keys(certificateImages).length;
 
   let idValue = Number(valueId);
-
   if (
     isNaN(idValue) ||
     idValue < 1 ||
