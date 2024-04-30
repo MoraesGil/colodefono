@@ -13,7 +13,10 @@ import { certificateImages } from "./CertificatePaths";
 const CertificatesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const valueId = id ? id : 1;
-  const certificatesLength = Object.keys(certificateImages).length;
+
+  const labelKeys = Object.keys(certificateImages);
+
+  const certificatesLength = labelKeys.length;
 
   let idValue = Number(valueId);
   if (
@@ -25,10 +28,21 @@ const CertificatesPage: React.FC = () => {
     idValue = 1;
   }
 
-  const certificateIndex = idValue - 1;
+  const favoriteCertificateKeys = labelKeys.filter(
+    (key) => certificateImages[key].favorite
+  );
 
-  const labelKeys = Object.keys(certificateImages);
-  const label = labelKeys[certificateIndex];
+  const unfavoritedCertificateKeys = labelKeys.filter(
+    (key) => !certificateImages[key].favorite
+  );
+
+  const organizedCertificateKeys = [
+    ...favoriteCertificateKeys,
+    ...unfavoritedCertificateKeys,
+  ];
+
+  const certificateIndex = idValue - 1;
+  const label = organizedCertificateKeys[certificateIndex];
   const images = certificateImages[label];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,11 +60,11 @@ const CertificatesPage: React.FC = () => {
 
   return (
     <div>
-      <CertificateMenu lengthArray={labelKeys.length} label={label} id={id} />
+      <CertificateMenu lengthArray={certificatesLength} label={label} id={id} />
 
       <ContentSide>
         <ContentImagesSide>
-          {images.map((img, index) => (
+          {images.imagePaths.map((img, index) => (
             <div key={index}>
               <img
                 src={img}
@@ -65,7 +79,7 @@ const CertificatesPage: React.FC = () => {
 
       <ContentWrapper>
         <CertificateImagesWrapper>
-          {images.map((img, index) => (
+          {images.imagePaths.map((img, index) => (
             <div key={index}>
               <img
                 src={img}

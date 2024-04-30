@@ -1,4 +1,4 @@
-import { baseUrl } from "../../App";
+export const urlBase = "/colodefono";
 
 type certificateImages = Record<
   string,
@@ -13,8 +13,8 @@ export const certificateImages: certificateImages = {
     favorite: true,
 
     imagePaths: [
-      `${baseUrl}/certificates/20151212/001/frente.jpg`,
-      `${baseUrl}/certificates/20151212/001/verso.jpg`,
+      `${urlBase}/certificates/20151212/001/frente.jpg`,
+      `${urlBase}/certificates/20151212/001/verso.jpg`,
     ],
   },
 
@@ -22,8 +22,8 @@ export const certificateImages: certificateImages = {
     favorite: true,
 
     imagePaths: [
-      `${baseUrl}/certificates/20171216/001/frente.jpg`,
-      `${baseUrl}/certificates/20171216/001/verso.jpg`,
+      `${urlBase}/certificates/20171216/001/frente.jpg`,
+      `${urlBase}/certificates/20171216/001/verso.jpg`,
     ],
   },
 
@@ -31,23 +31,23 @@ export const certificateImages: certificateImages = {
     favorite: false,
 
     imagePaths: [
-      `${baseUrl}/certificates/20181124/001/frente.jpg`,
-      `${baseUrl}/certificates/20181124/001/verso.jpg`,
+      `${urlBase}/certificates/20181124/001/frente.jpg`,
+      `${urlBase}/certificates/20181124/001/verso.jpg`,
     ],
   },
 
   [`Intervenção na Disfagia de Pacientes Adultos Pós-AVC`]: {
     favorite: false,
 
-    imagePaths: [`${baseUrl}/certificates/20200314/001/frente.jpg`],
+    imagePaths: [`${urlBase}/certificates/20200314/001/frente.jpg`],
   },
 
   [`Formação Clínica em Disfagia: do Hospital ao Home Care`]: {
     favorite: false,
 
     imagePaths: [
-      `${baseUrl}/certificates/20200819/001/frente.jpg`,
-      `${baseUrl}/certificates/20200819/001/verso.jpg`,
+      `${urlBase}/certificates/20200819/001/frente.jpg`,
+      `${urlBase}/certificates/20200819/001/verso.jpg`,
     ],
   },
 
@@ -55,8 +55,8 @@ export const certificateImages: certificateImages = {
     favorite: false,
 
     imagePaths: [
-      `${baseUrl}/certificates/20210805/001/frente.jpg`,
-      `${baseUrl}/certificates/20210805/001/verso.jpg`,
+      `${urlBase}/certificates/20210805/001/frente.jpg`,
+      `${urlBase}/certificates/20210805/001/verso.jpg`,
     ],
   },
 
@@ -65,8 +65,8 @@ export const certificateImages: certificateImages = {
       favorite: false,
 
       imagePaths: [
-        `${baseUrl}/certificates/20211028/001/frente.jpg`,
-        `${baseUrl}/certificates/20211028/001/verso.jpg`,
+        `${urlBase}/certificates/20211028/001/frente.jpg`,
+        `${urlBase}/certificates/20211028/001/verso.jpg`,
       ],
     },
 
@@ -74,8 +74,8 @@ export const certificateImages: certificateImages = {
     favorite: true,
 
     imagePaths: [
-      `${baseUrl}/certificates/20220218/001/frente.jpg`,
-      `${baseUrl}/certificates/20220218/001/verso.jpg`,
+      `${urlBase}/certificates/20220218/001/frente.jpg`,
+      `${urlBase}/certificates/20220218/001/verso.jpg`,
     ],
   },
 
@@ -83,8 +83,8 @@ export const certificateImages: certificateImages = {
     favorite: false,
 
     imagePaths: [
-      `${baseUrl}/certificates/20220414/001/frente.jpg`,
-      `${baseUrl}/certificates/20220414/001/verso.jpg`,
+      `${urlBase}/certificates/20220414/001/frente.jpg`,
+      `${urlBase}/certificates/20220414/001/verso.jpg`,
     ],
   },
 
@@ -92,33 +92,51 @@ export const certificateImages: certificateImages = {
     favorite: false,
 
     imagePaths: [
-      `${baseUrl}/certificates/20230131/001/frente.jpg`,
-      `${baseUrl}/certificates/20230131/001/verso.jpg`,
+      `${urlBase}/certificates/20230131/001/frente.jpg`,
+      `${urlBase}/certificates/20230131/001/verso.jpg`,
     ],
   },
 
   [`Teste da Linguinha e Aprofundamento em Frênulo Lingual`]: {
     favorite: false,
 
-    imagePaths: [`${baseUrl}/certificates/20230330/001/frente.jpg`],
+    imagePaths: [`${urlBase}/certificates/20230330/001/frente.jpg`],
   },
 
   [`Seletividade Alimentar em Crianças e Adolecentes`]: {
     favorite: false,
 
-    imagePaths: [`${baseUrl}/certificates/20230405/001/frente.jpg`],
+    imagePaths: [`${urlBase}/certificates/20230405/001/frente.jpg`],
   },
 
   [`Consultoria em Amamentação para Fonoaudiólogos`]: {
     favorite: false,
 
-    imagePaths: [`${baseUrl}/certificates/20230501/001/frente.jpg`],
+    imagePaths: [`${urlBase}/certificates/20230501/001/frente.jpg`],
   },
 
   [`MO e Linguagem: Onde os Caminhos se Cruzam?`]: {
     favorite: false,
 
-    imagePaths: [`${baseUrl}/certificates/20240403/001/verso.jpg`],
+    imagePaths: [`${urlBase}/certificates/20240403/001/verso.jpg`],
+  },
+
+  [`Teste da Linguinha e Aprofundamento em Frenulo Lingual`]: {
+    favorite: false,
+
+    imagePaths: [`${urlBase}/certificates/20240329/001/frente.jpg`],
+  },
+
+  [`Consultoria em Amamentação para Fonoaudiologos`]: {
+    favorite: false,
+
+    imagePaths: [`${urlBase}/certificates/20240308/001/frente.jpg`],
+  },
+
+  [`Seletividade Alimentar em Crianças e Adolescentes`]: {
+    favorite: false,
+
+    imagePaths: [`${urlBase}/certificates/20240405/001/frente.jpg`],
   },
 };
 

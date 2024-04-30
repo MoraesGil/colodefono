@@ -16,7 +16,6 @@ import {
 } from "./CertificateMenu.styles";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { certificateImages } from "../../screens/CertificatesPage/CertificatePaths";
-import { baseUrl } from "../../App";
 
 interface CertificateMenuProps {
   lengthArray: number;
@@ -37,14 +36,14 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
   const handleNextCertificate = () => {
     const next = (currentCertificate % certificateCount) + 1;
     setCurrentCertificate(next);
-    navigate(`/colodefono/certificates/${next}`);
+    navigate(`/certificates/${next}`);
   };
 
   const handlePreviousCertificate = () => {
     const previous =
       ((currentCertificate - 2 + certificateCount) % certificateCount) + 1;
     setCurrentCertificate(previous);
-    navigate(`/colodefono/certificates/${previous}`);
+    navigate(`/certificates/${previous}`);
   };
 
   const handleKey = (event: KeyboardEvent) => {
@@ -73,7 +72,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
             {Object.keys(certificateImages).map((category, index) => {
               return (
                 <Link
-                  to={`${baseUrl}/certificates/${index + 1}`}
+                  to={`/certificates/${index + 1}`}
                   onClick={() => setCurrentCertificate(index + 1)}
                 >
                   <MenuItem
