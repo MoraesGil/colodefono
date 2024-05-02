@@ -46,14 +46,24 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
     navigate(`/certificates/${previous}`);
   };
 
-  const handleKey = (event: KeyboardEvent) => {
-    if (event.key === "ArrowLeft") {
-      handlePreviousCertificate();
-    }
+  const handleBackKey = () => {
+    navigate(`/`);
+  };
 
-    if (event.key === "ArrowRight") {
-      handleNextCertificate();
-    }
+  enum AvailableKeys {
+    ARROWLEFT = "ArrowLeft",
+    ARROWRIGHT = "ArrowRight",
+    ESCAPE = "Escape",
+  }
+
+  const handleKey = (event: KeyboardEvent) => {
+    const handle: { [key: string]: () => void } = {
+      [AvailableKeys.ARROWLEFT]: handlePreviousCertificate,
+      [AvailableKeys.ARROWRIGHT]: handleNextCertificate,
+      [AvailableKeys.ESCAPE]: handleBackKey,
+    };
+
+    handle[event.key as AvailableKeys]();
   };
 
   useEffect(() => {
