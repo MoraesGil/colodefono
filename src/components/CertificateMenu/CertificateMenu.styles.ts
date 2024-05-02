@@ -5,7 +5,9 @@ export const Logo = styled.div`
   align-items: center;
   padding: 10px;
   a {
+    font-family: "inter", sans-serif;
     text-decoration: none;
+    font-size: 1.5em;
   }
 `;
 
@@ -24,7 +26,7 @@ export const BackButton = styled.button`
 `;
 export const SidebarContainer = styled.div`
   height: 100vh;
-  width: 25%;
+  width: 20%;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   display: flex;
@@ -84,7 +86,6 @@ export const CarouselContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 200px;
-  border: 1px solid #ccc;
   padding: 10px;
   box-sizing: border-box;
 

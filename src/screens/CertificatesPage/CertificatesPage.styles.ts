@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
+  height: 100%;
+
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -31,7 +35,7 @@ export const CertificatesPageWrapper = styled.div`
 export const ContainerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 80%;
   padding-right: 15px;
   padding-top: 15px;
 
@@ -47,6 +51,10 @@ export const ButtonWrapper = styled.div`
 
   @media screen and (max-width: 1000px) {
     display: none;
+  }
+
+  @media screen and (max-width: 1300px) {
+    margin-bottom: 5%;
   }
 `;
 
@@ -71,6 +79,16 @@ export const CertificateImagesWrapper = styled.div`
 
     div {
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      width: 100%;
+      padding: 0 5%;
     }
   }
 `;
