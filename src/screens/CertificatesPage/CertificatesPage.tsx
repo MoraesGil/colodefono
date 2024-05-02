@@ -67,7 +67,6 @@ const CertificatesPage: React.FC = () => {
       <CertificateMenu
         lengthArray={certificatesLength}
         label={label}
-        id={id}
         organizedCertificateKeys={organizedCertificateKeys}
       />
       <ContainerWrapper>
