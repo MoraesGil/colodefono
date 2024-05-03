@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
@@ -52,17 +52,17 @@ const CertificatesPage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setIsLoading(true);
+  // useEffect(() => {
+  //   setIsLoading(true);
 
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+  //   const timer = setTimeout(() => {
+  //     // setIsLoading(false);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, [idValue]);
+  //   return () => clearTimeout(timer);
+  // }, [idValue]);
 
   const handleImageClick = (image: string) => {
     setSelectedImage(image);
