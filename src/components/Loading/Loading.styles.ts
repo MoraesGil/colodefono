@@ -1,15 +1,26 @@
-import styled from 'styled-components/native';
+import styled from "styled-components";
 
-import theme from '../../theme';
-
-export const Container = styled.View`
-  flex: 1;
-  align-items: center;
+export const Container = styled.div`
+  display: flex;
   justify-content: center;
-
-  background-color: ${theme.COLORS.SURFACE_COLOR};
+  align-items: center;
+  height: 100vh;
 `;
 
-export const LoadIndicator = styled.ActivityIndicator.attrs(() => ({
-  color: theme.COLORS.TEXT_COLOR
-}))``
+export const LoadIndicator = styled.div`
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;

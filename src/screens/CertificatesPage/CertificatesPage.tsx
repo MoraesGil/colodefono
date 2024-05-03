@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import CertificateMenu from "../../components/CertificateMenu/CertificateMenu";
 import {
@@ -32,13 +32,13 @@ const CertificatesPage: React.FC = () => {
     idValue = 1;
   }
 
-  const favoriteCertificateKeys = labelKeys.filter(
-    (key) => certificateImages[key].favorite
-  ).reverse();
+  const favoriteCertificateKeys = labelKeys
+    .filter((key) => certificateImages[key].favorite)
+    .reverse();
 
-  const unfavoritedCertificateKeys = labelKeys.filter(
-    (key) => !certificateImages[key].favorite
-  ).reverse();
+  const unfavoritedCertificateKeys = labelKeys
+    .filter((key) => !certificateImages[key].favorite)
+    .reverse();
 
   const organizedCertificateKeys = [
     ...favoriteCertificateKeys,
@@ -51,6 +51,18 @@ const CertificatesPage: React.FC = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [idValue]);
 
   const handleImageClick = (image: string) => {
     setSelectedImage(image);
