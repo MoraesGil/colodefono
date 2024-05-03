@@ -69,7 +69,7 @@ export const certificateImages: certificateImages = {
     },
 
   [`Atuação Fonoaudiológica Neotal e Pediátrica`]: {
-    favorite: true,
+    favorite: false,
 
     imagePaths: [
       `/certificates/20220218/001/frente.jpg`,
@@ -113,42 +113,27 @@ export const certificateImages: certificateImages = {
     imagePaths: [`/certificates/20230501/001/frente.jpg`],
   },
 
-  [`MO e Linguagem: Onde os Caminhos se Cruzam?`]: {
-    favorite: false,
-
-    imagePaths: [`/certificates/20240403/001/verso.jpg`],
-  },
-
   [`Teste da Linguinha e Aprofundamento em Frenulo Lingual`]: {
     favorite: false,
 
-    imagePaths: [`/certificates/20240329/001/frente.jpg`],
+    imagePaths: [`/certificates/20230329/001/frente.jpg`],
   },
 
   [`Consultoria em Amamentação para Fonoaudiologos`]: {
     favorite: false,
 
-    imagePaths: [`/certificates/20240308/001/frente.jpg`],
+    imagePaths: [`/certificates/20230308/001/frente.jpg`],
   },
 
   [`Seletividade Alimentar em Crianças e Adolescentes`]: {
     favorite: false,
 
-    imagePaths: [`/certificates/20240405/001/frente.jpg`],
+    imagePaths: [`/certificates/20230405/001/frente.jpg`],
+  },
+
+  [`MO e Linguagem: Onde os Caminhos se Cruzam?`]: {
+    favorite: false,
+
+    imagePaths: [`/certificates/20240403/001/verso.jpg`],
   },
 };
-
-export const labelKeys = Object.keys(certificateImages);
-
-export const favoriteCertificateKeys = labelKeys.filter(
-  (key) => certificateImages[key].favorite
-);
-
-export const unfavoritedCertificateKeys = labelKeys.filter(
-  (key) => !certificateImages[key].favorite
-);
-
-export const organizedCertificateKeys = [
-  ...favoriteCertificateKeys,
-  ...unfavoritedCertificateKeys,
-];

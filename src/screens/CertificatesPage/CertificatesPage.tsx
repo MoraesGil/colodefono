@@ -34,11 +34,11 @@ const CertificatesPage: React.FC = () => {
 
   const favoriteCertificateKeys = labelKeys.filter(
     (key) => certificateImages[key].favorite
-  );
+  ).reverse();
 
   const unfavoritedCertificateKeys = labelKeys.filter(
     (key) => !certificateImages[key].favorite
-  );
+  ).reverse();
 
   const organizedCertificateKeys = [
     ...favoriteCertificateKeys,
