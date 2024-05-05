@@ -12,7 +12,8 @@ import Modal from '../../components/Modal/Modal';
 import { certificateImages } from './CertificatePaths';
 
 const CertificatesPage: React.FC = () => {
-	const baseUrl = import.meta.env.BASE_URL;
+	const sanitizeBaseUrl = (url: string): string => url?.replace(/\/+$/, '');
+	const baseUrl = sanitizeBaseUrl(import.meta.env.BASE_URL);
 
 	const { id } = useParams<{ id: string }>();
 	const valueId = id ? id : 1;
@@ -83,7 +84,7 @@ const CertificatesPage: React.FC = () => {
 					{images.imagePaths.map((imgPath, index) => (
 						<div key={index}>
 							<img
-								src={`${baseUrl}assets${imgPath}`}
+								src={`${baseUrl}${imgPath}`}
 								alt={`Certificado ${index}`}
 								onClick={() => handleImageClick(imgPath)}
 								style={{ cursor: 'pointer' }}
@@ -97,7 +98,7 @@ const CertificatesPage: React.FC = () => {
 				<Modal visible={isModalOpen} onClose={handleModalClose}>
 					{selectedImage && (
 						<img
-							src={`${baseUrl}assets${selectedImage}`}
+							src={`${baseUrl}${selectedImage}`}
 							alt="Imagem do certificado"
 							style={{ maxWidth: '100%' }}
 						/>
