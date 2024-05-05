@@ -83,7 +83,7 @@ const CertificatesPage: React.FC = () => {
 					{images.imagePaths.map((imgPath, index) => (
 						<div key={index}>
 							<img
-								src={`${baseUrl}assets${imgPath}`}
+								src={`${baseUrl}/assets${imgPath}`}
 								alt={`Certificado ${index}`}
 								onClick={() => handleImageClick(imgPath)}
 								style={{ cursor: 'pointer' }}
@@ -97,7 +97,7 @@ const CertificatesPage: React.FC = () => {
 				<Modal visible={isModalOpen} onClose={handleModalClose}>
 					{selectedImage && (
 						<img
-							src={`${baseUrl}assets${selectedImage}`}
+							src={`${baseUrl}/assets${selectedImage}`}
 							alt="Imagem do certificado"
 							style={{ maxWidth: '100%' }}
 						/>
