@@ -67,7 +67,6 @@ export const CarouselContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: 200px;
 	padding: 10px;
 	box-sizing: border-box;
 `;

@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import CertificateMenu, {
 	CertificatePosition,
 } from '../../components/CertificateMenu/CertificateMenu';
 import {
-	ButtonWrapper,
 	CertificateImagesWrapper,
 	CertificatesPageWrapper,
 	ContainerWrapper,
-	ContentWrapper,
 } from './CertificatesPage.styles';
 import Modal from '../../components/Modal/Modal';
 import { certificateImages } from './CertificatePaths';
-import { BackButtonSide } from '../../components/CertificateMenu/CertificateMenu.styles';
 
 const CertificatesPage: React.FC = () => {
 	const baseUrl = import.meta.env.BASE_URL;
@@ -73,7 +70,7 @@ const CertificatesPage: React.FC = () => {
 			/>
 
 			<ContainerWrapper>
-				<CertificateMenu					
+				<CertificateMenu
 					position={CertificatePosition.TOP}
 					lengthArray={certificatesLength}
 					label={label}
@@ -98,7 +95,7 @@ const CertificatesPage: React.FC = () => {
 				<Modal visible={isModalOpen} onClose={handleModalClose}>
 					{selectedImage && (
 						<img
-							src={baseUrl + selectedImage}
+							src={`${baseUrl}assets${selectedImage}`}
 							alt="Imagem do certificado"
 							style={{ maxWidth: '100%' }}
 						/>
