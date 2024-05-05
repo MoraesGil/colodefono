@@ -1,139 +1,121 @@
 type certificateImages = Record<
-  string,
-  {
-    favorite: boolean;
-    imagePaths: string[];
-  }
+	string,
+	{
+		favorite: boolean;
+		imagePaths: string[];
+	}
 >;
 
 export const certificateImages: certificateImages = {
-  [`Bacharelado em Fonoaudiologia`]: {
-    favorite: true,
+	[`Bacharelado em Fonoaudiologia`]: {
+		favorite: true,
 
-    imagePaths: [
-      `/certificates/20151212/001/frente.jpg`,
-      `/certificates/20151212/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2015-12-12/001/frente.jpg`,
+			`/certificates/2015-12-12/001/verso.jpg`,
+		],
+	},
 
-  [`Especialização em Adiologia Clínica e Ocupacional`]: {
-    favorite: true,
+	[`Especialização em Adiologia Clínica e Ocupacional`]: {
+		favorite: true,
 
-    imagePaths: [
-      `/certificates/20171216/001/frente.jpg`,
-      `/certificates/20171216/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2017-12-16/001/frente.jpg`,
+			`/certificates/2017-12-16/001/verso.jpg`,
+		],
+	},
 
-  [`Aprimoramento em Disfagia`]: {
-    favorite: false,
+	[`Aprimoramento em Disfagia`]: {
+		favorite: false,
 
-    imagePaths: [
-      `/certificates/20181124/001/frente.jpg`,
-      `/certificates/20181124/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2018-11-24/001/frente.jpg`,
+			`/certificates/2018-11-24/001/verso.jpg`,
+		],
+	},
 
-  [`Intervenção na Disfagia de Pacientes Adultos Pós-AVC`]: {
-    favorite: false,
+	[`Intervenção na Disfagia de Pacientes Adultos Pós-AVC`]: {
+		favorite: false,
 
-    imagePaths: [`/certificates/20200314/001/frente.jpg`],
-  },
+		imagePaths: [`/certificates/2020-03-14/001/frente.jpg`],
+	},
 
-  [`Formação Clínica em Disfagia: do Hospital ao Home Care`]: {
-    favorite: false,
+	[`Formação Clínica em Disfagia: do Hospital ao Home Care`]: {
+		favorite: false,
 
-    imagePaths: [
-      `/certificates/20200819/001/frente.jpg`,
-      `/certificates/20200819/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2020-08-17/001/frente.jpg`,
+			`/certificates/2020-08-17/001/verso.jpg`,
+		],
+	},
 
-  [`Atuação Fonoaudiológica em Pacientes Adultos com Disfagia Neurogênica`]: {
-    favorite: false,
+	[`Atuação Fonoaudiológica em Pacientes Adultos com Disfagia Neurogênica`]: {
+		favorite: false,
 
-    imagePaths: [
-      `/certificates/20210805/001/frente.jpg`,
-      `/certificates/20210805/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2021-08-15/001/frente.jpg`,
+			`/certificates/2021-08-15/001/verso.jpg`,
+		],
+	},
 
-  [`Atuação Fonoaudiológica em Disfagia Mecânica e Alterações Craniofaciais Oromiofuncionais`]:
-    {
-      favorite: false,
+	[`Atuação Fonoaudiológica em Disfagia Mecânica e Alterações Craniofaciais Oromiofuncionais`]:
+		{
+			favorite: false,
 
-      imagePaths: [
-        `/certificates/20211028/001/frente.jpg`,
-        `/certificates/20211028/001/verso.jpg`,
-      ],
-    },
+			imagePaths: [
+				`/certificates/2021-10-28/001/frente.jpg`,
+				`/certificates/2021-10-28/001/verso.jpg`,
+			],
+		},
 
-  [`Atuação Fonoaudiológica Neotal e Pediátrica`]: {
-    favorite: false,
+	[`Atuação Fonoaudiológica Neotal e Pediátrica`]: {
+		favorite: false,
 
-    imagePaths: [
-      `/certificates/20220218/001/frente.jpg`,
-      `/certificates/20220218/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2022-02-18/001/frente.jpg`,
+			`/certificates/2022-02-18/001/verso.jpg`,
+		],
+	},
 
-  [`Diagnóstico por Imagem para Avaliação da Deglutição`]: {
-    favorite: false,
+	[`Diagnóstico por Imagem para Avaliação da Deglutição`]: {
+		favorite: false,
 
-    imagePaths: [
-      `/certificates/20220414/001/frente.jpg`,
-      `/certificates/20220414/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2022-04-14/001/frente.jpg`,
+			`/certificates/2022-04-14/001/verso.jpg`,
+		],
+	},
 
-  [`Curso Online Aba e Autismo`]: {
-    favorite: false,
+	[`Curso Online Aba e Autismo`]: {
+		favorite: false,
 
-    imagePaths: [
-      `/certificates/20230131/001/frente.jpg`,
-      `/certificates/20230131/001/verso.jpg`,
-    ],
-  },
+		imagePaths: [
+			`/certificates/2023-01-31/001/frente.jpg`,
+			`/certificates/2023-01-31/001/verso.jpg`,
+		],
+	},
 
-  [`Teste da Linguinha e Aprofundamento em Frênulo Lingual`]: {
-    favorite: false,
+	[`Teste da Linguinha e Aprofundamento em Frênulo Lingual`]: {
+		favorite: false,
 
-    imagePaths: [`/certificates/20230330/001/frente.jpg`],
-  },
+		imagePaths: [`/certificates/2023-03-30/001/frente.jpg`],
+	},
 
-  [`Seletividade Alimentar em Crianças e Adolecentes`]: {
-    favorite: false,
+	[`Seletividade Alimentar em Crianças e Adolecentes`]: {
+		favorite: false,
 
-    imagePaths: [`/certificates/20230405/001/frente.jpg`],
-  },
+		imagePaths: [`/certificates/2023-04-05/001/frente.jpg`],
+	},
 
-  [`Consultoria em Amamentação para Fonoaudiólogos`]: {
-    favorite: false,
+	[`Consultoria em Amamentação para Fonoaudiólogos`]: {
+		favorite: false,
 
-    imagePaths: [`/certificates/20230501/001/frente.jpg`],
-  },
+		imagePaths: [`/certificates/2023-05-01/001/frente.jpg`],
+	},
 
-  [`Teste da Linguinha e Aprofundamento em Frenulo Lingual`]: {
-    favorite: false,
+	[`MO e Linguagem: Onde os Caminhos se Cruzam?`]: {
+		favorite: false,
 
-    imagePaths: [`/certificates/20230329/001/frente.jpg`],
-  },
-
-  [`Consultoria em Amamentação para Fonoaudiologos`]: {
-    favorite: false,
-
-    imagePaths: [`/certificates/20230308/001/frente.jpg`],
-  },
-
-  [`Seletividade Alimentar em Crianças e Adolescentes`]: {
-    favorite: false,
-
-    imagePaths: [`/certificates/20230405/001/frente.jpg`],
-  },
-
-  [`MO e Linguagem: Onde os Caminhos se Cruzam?`]: {
-    favorite: false,
-
-    imagePaths: [`/certificates/20240403/001/verso.jpg`],
-  },
+		imagePaths: [`/certificates/2024-04-03/001/frente.jpg`],
+	},
 };
