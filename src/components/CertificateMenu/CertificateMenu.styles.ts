@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const Logo = styled.div`
-	display: flex;
+	display: none;
 	align-items: center;
-	padding: 10px;
+	padding: 0px 10px;
 	a {
 		font-family: 'inter', sans-serif;
 		text-decoration: none;
 		font-size: 1.5em;
+	}
+
+	@media screen and (max-width: 1000px) {
+		display: flex;
 	}
 `;
 
@@ -26,13 +30,13 @@ export const BackButton = styled.button`
 `;
 export const SidebarContainer = styled.div`
 	height: 100vh;
-	width: 20%;
+	width: 500px;
 	background-color: rgba(0, 0, 0, 0.2);
 	color: white;
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
-	overflow-y: auto;
+	overflow: auto;
 
 	@media screen and (max-width: 1000px) {
 		display: none;
@@ -69,6 +73,7 @@ export const CarouselContainer = styled.div`
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
+	
 `;
 
 export const Content = styled.div`
@@ -76,14 +81,18 @@ export const Content = styled.div`
 `;
 
 export const CarouselContent = styled.div`
-	display: flex;
+	display: none;
+
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 20px;
-	height: 100px;
 
 	.none {
 		display: none;
+	}
+
+	@media screen and (max-width: 1000px) {
+		display: flex;
 	}
 `;
 
@@ -95,8 +104,13 @@ export const HandleContent = styled.div`
 
 export const TopContent = styled.div`
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
+
 	padding-bottom: 5;
+
+	@media screen and (max-width: 1000px) {
+		justify-content: space-between;
+	}
 `;
 
 export const CarouselText = styled.div`

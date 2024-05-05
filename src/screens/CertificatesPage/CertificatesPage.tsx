@@ -64,6 +64,7 @@ const CertificatesPage: React.FC = () => {
 	return (
 		<CertificatesPageWrapper>
 			<CertificateMenu
+				disabled={isModalOpen}
 				lengthArray={certificatesLength}
 				label={label}
 				organizedCertificateKeys={organizedCertificateKeys}
@@ -71,6 +72,7 @@ const CertificatesPage: React.FC = () => {
 
 			<ContainerWrapper>
 				<CertificateMenu
+					disabled={isModalOpen}
 					position={CertificatePosition.TOP}
 					lengthArray={certificatesLength}
 					label={label}

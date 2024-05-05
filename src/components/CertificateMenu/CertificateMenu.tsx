@@ -20,17 +20,19 @@ export enum CertificatePosition {
 	LEFT = 2,
 }
 interface CertificateMenuProps {
-  lengthArray: number;
+	lengthArray: number;
 	label: any;
 	organizedCertificateKeys: string[];
 	position?: CertificatePosition;
+	disabled?: boolean;
 }
 
 const CertificateMenu: React.FC<CertificateMenuProps> = ({
-  lengthArray,
+	lengthArray,
 	label,
 	organizedCertificateKeys,
 	position = CertificatePosition.LEFT,
+	disabled,
 }) => {
 	const [currentCertificate, setCurrentCertificate] = useState(1);
 	const navigate = useNavigate();
@@ -67,7 +69,9 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
 			[AvailableKeys.ESCAPE]: handleBackKey,
 		};
 
-		handle[event.key as AvailableKeys]();
+		if (!disabled) {
+			handle[event.key as AvailableKeys]();
+		}
 	};
 
 	useEffect(() => {
@@ -117,6 +121,7 @@ const CertificateMenu: React.FC<CertificateMenuProps> = ({
 						<CarouselContent>
 							<HandleContent onClick={handlePreviousCertificate}>
 								<a
+									href="#"
 									onClick={handlePreviousCertificate}
 									className={currentCertificate === 1 ? 'none' : ''}
 								>
