@@ -7,6 +7,8 @@ export default defineConfig({
 		react(),
 		copy({
 			targets: [
+				{ src: 'src/404.html', dest: 'dist/' },
+				{ src: 'src/200.html', dest: 'dist/' },
 				{ src: 'src/assets/*', dest: 'dist/assets' },
 				{
 					src: 'src/assets/certificates/**',
