@@ -7,17 +7,14 @@ export default defineConfig({
 		react(),
 		copy({
 			targets: [
-				{ src: 'src/404.html', dest: 'dist/' },
-				{ src: 'src/200.html', dest: 'dist/' },
 				{ src: 'src/assets/*', dest: 'dist/assets' },
-				{
-					src: 'src/assets/certificates/**',
-					dest: 'dist/assets/certificates',
-				},
+				{ src: 'src/assets/certificates/*', dest: 'dist/assets/certificates' },
+				{ src: 'dist/index.html', dest: 'dist', rename: '404.html' },
+				{ src: 'dist/index.html', dest: 'dist', rename: '200.html' },
 			],
 			hook: 'writeBundle',
 		}),
 	],
 	publicDir: 'src',
-	base: process.env.NODE_ENV === 'production' ? '/' : '/colodefono',
+	base: process.env.NODE_ENV === 'production' ? '/' : '/',
 });
