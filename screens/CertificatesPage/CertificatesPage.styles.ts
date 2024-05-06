@@ -24,8 +24,7 @@ export const CertificatesPageWrapper = styled.div`
 export const ContainerWrapper = styled.div`
 	height: 100vh;
 	overflow-y: auto;
-	padding-right: 15px;
-	padding-top: 15px;
+	width: 80%;
 `;
 
 export const CertificateImagesWrapper = styled.div`
@@ -39,5 +38,9 @@ export const CertificateImagesWrapper = styled.div`
 		padding-top: 10;
 		width: 100%;
 		box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	@media screen and (min-width: 1000px) {
+		padding: 0 10%;
 	}
 `;

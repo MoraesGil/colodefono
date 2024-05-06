@@ -158,13 +158,17 @@ Error generating stack: `+i.message+`
 	}
 `,b1=Q.div`
 	height: 100vh;
-	width: 500px;
+	width: 20%;
 	background-color: rgba(0, 0, 0, 0.2);
 	color: white;
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
 	overflow: auto;
+
+	h2 {
+		padding: 20px;
+	}
 
 	@media screen and (max-width: 1000px) {
 		display: none;
@@ -195,7 +199,6 @@ Error generating stack: `+i.message+`
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
-	
 `,rv=Q.div`
 	width: 100%;
 `,lv=Q.div`
@@ -249,8 +252,7 @@ Error generating stack: `+i.message+`
 `,cv=Q.div`
 	height: 100vh;
 	overflow-y: auto;
-	padding-right: 15px;
-	padding-top: 15px;
+	width: 80%;
 `,fv=Q.div`
 	gap: 10px;
 
@@ -262,6 +264,10 @@ Error generating stack: `+i.message+`
 		padding-top: 10;
 		width: 100%;
 		box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	@media screen and (min-width: 1000px) {
+		padding: 0 10%;
 	}
 `,dv=Q.div`
   display: ${({visible:e})=>e?"flex":"none"};

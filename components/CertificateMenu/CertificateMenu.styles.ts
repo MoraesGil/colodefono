@@ -30,13 +30,17 @@ export const BackButton = styled.button`
 `;
 export const SidebarContainer = styled.div`
 	height: 100vh;
-	width: 500px;
+	width: 20%;
 	background-color: rgba(0, 0, 0, 0.2);
 	color: white;
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
 	overflow: auto;
+
+	h2 {
+		padding: 20px;
+	}
 
 	@media screen and (max-width: 1000px) {
 		display: none;
@@ -73,7 +77,6 @@ export const CarouselContainer = styled.div`
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
-	
 `;
 
 export const Content = styled.div`
