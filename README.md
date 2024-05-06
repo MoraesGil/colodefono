@@ -1,9 +1,8 @@
-<h1 align="center"> Projeto 02</h1>
+<h1 align="center"> colodefono</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>
+  <a href="#-projeto">Projeto</a>;
 </p>
 
 <br>
@@ -16,21 +15,20 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+
 - HTML e CSS
-- Figma
+- Typescript e React
+
+
 
 ## 💻 Projeto
 
-O Projeto 02 é um projeto da trilha Explorer da Rocketseat, o projeto é desenvolvido no "Stage 02 - Introdução ao HTML e CSS".
+O Colodefono foi um projeto desenvolvido para a Fonoaudióloga Valéria Moraes. O objetivo do projeto é apresentar os links para as redes sociais dela e seus certificados.
 
-- [Acesse o projeto finalizado, online](https://lybiomoraesjr.github.io/RocketseatExplorer_HTML_CSS_Project02/)
-
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/fAvYZz4dPV5MfhL77XkqkD/Explorer---Projeto-01/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+- [Acesse o projeto finalizado, online](http://colodefono.com.br/)
 
 ---
 
 <p align="center">
-Feito com ♥ by Gilberto Moraes, Lybio Moraes Junior, Vinicius Dias
+Feito com ♥ by Gilberto Moraes, Lybio Moraes Junior e Vinicius Dias
 </p>
