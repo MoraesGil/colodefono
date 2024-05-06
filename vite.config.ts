@@ -16,5 +16,5 @@ export default defineConfig({
 		}),
 	],
 	publicDir: 'src',
-	base: process.env.NODE_ENV === 'production' ? '/' : '/',
+	base: process.env.NODE_ENV === 'production' ? '/' : '/dev/',
 });
