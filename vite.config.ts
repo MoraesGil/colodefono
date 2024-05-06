@@ -17,5 +17,5 @@ export default defineConfig({
 		}),
 	],
 	publicDir: 'src',
-	base: process.env.NODE_ENV === 'production' ? '/colodefono/' : '/',
+	base: process.env.NODE_ENV === 'production' ? '/' : '/colodefono',
 });
