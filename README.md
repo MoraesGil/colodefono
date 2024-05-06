@@ -32,5 +32,5 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 ---
 
 <p align="center">
-Feito com ♥ by Gilberto, Lybio Moraes Junior, Vinicius Dias
+Feito com ♥ by Gilberto Moraes, Lybio Moraes Junior, Vinicius Dias
 </p>
