@@ -16,9 +16,9 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 
-- HTML e CSS
-- Typescript e React
-
+- TypeScript e React
+- HTML
+- CSS
 
 
 ## 💻 Projeto
