@@ -252,7 +252,10 @@ Error generating stack: `+i.message+`
 `,cv=Q.div`
 	height: 100vh;
 	overflow-y: auto;
-	width: 80%;
+
+	@media screen and (min-width: 1000px) {
+		width: 80%;
+	}
 `,fv=Q.div`
 	gap: 10px;
 

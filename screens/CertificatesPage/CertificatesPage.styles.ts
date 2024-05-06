@@ -24,7 +24,10 @@ export const CertificatesPageWrapper = styled.div`
 export const ContainerWrapper = styled.div`
 	height: 100vh;
 	overflow-y: auto;
-	width: 80%;
+
+	@media screen and (min-width: 1000px) {
+		width: 80%;
+	}
 `;
 
 export const CertificateImagesWrapper = styled.div`
