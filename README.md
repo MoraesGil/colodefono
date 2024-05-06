@@ -23,7 +23,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Colodefono foi um projeto desenvolvido para a Fonoaudióloga Valéria Moraes. O objetivo do projeto é apresentar os links para as redes sociais dela e seus certificados acadêmicos.
+O colodefono foi um projeto desenvolvido para a Fonoaudióloga Valéria Moraes. O objetivo do projeto é apresentar os links para as redes sociais dela e seus certificados acadêmicos.
 
 - [Acesse o projeto finalizado, online](http://colodefono.com.br/)
 
