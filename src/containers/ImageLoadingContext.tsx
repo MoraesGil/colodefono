@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from "react";
+import Loading from "../components/Loading";
 interface ImageLoadingContextType {
   registerImage: () => void;
   unregisterImage: () => void;
@@ -37,8 +38,8 @@ const ImageLoadingProvider: React.FC<ImageLoadingProviderProps> = ({
 
   return (
     <ImageLoadingContext.Provider value={{ registerImage, unregisterImage }}>
-      {loadingCount > 0 && <div>Carregando imagens...</div>}
-      {/* {children} */}
+      {loadingCount > 0 && <Loading />}
+      {children}
     </ImageLoadingContext.Provider>
   );
 };
