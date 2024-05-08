@@ -3,6 +3,7 @@ import Loading from "../components/Loading";
 interface ImageLoadingContextType {
   registerImage: () => void;
   unregisterImage: () => void;
+  loadingCount: number;
 }
 
 type ImageLoadingProviderProps = {
@@ -33,11 +34,15 @@ const ImageLoadingProvider: React.FC<ImageLoadingProviderProps> = ({
   }, []);
 
   const unregisterImage = useCallback(() => {
-    setLoadingCount((count) => count - 1);
+    setTimeout(() => {
+      setLoadingCount((count) => count - 1);
+    }, 5000);
   }, []);
 
   return (
-    <ImageLoadingContext.Provider value={{ registerImage, unregisterImage }}>
+    <ImageLoadingContext.Provider
+      value={{ registerImage, unregisterImage, loadingCount }}
+    >
       {loadingCount > 0 && <Loading />}
       {children}
     </ImageLoadingContext.Provider>

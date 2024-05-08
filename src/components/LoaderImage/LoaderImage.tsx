@@ -14,7 +14,7 @@ const LoaderImage: React.FC<LoaderImageProps> = ({
   style,
   onClick,
 }) => {
-  const { registerImage, unregisterImage } = useImageLoading();
+  const { registerImage, unregisterImage, loadingCount } = useImageLoading();
 
   useEffect(() => {
     registerImage();
@@ -28,7 +28,7 @@ const LoaderImage: React.FC<LoaderImageProps> = ({
       onLoad={unregisterImage}
       onError={unregisterImage}
       onClick={onClick}
-      style={style}
+      style={{ ...style, display: loadingCount > 0 ? "none" : "block" }}
     />
   );
 };
