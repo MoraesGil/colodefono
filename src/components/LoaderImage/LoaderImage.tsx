@@ -4,11 +4,16 @@ import { useImageLoading } from "../../containers/ImageLoadingContext";
 interface LoaderImageProps {
   src: string;
   alt: string;
-  customStyle?: React.CSSProperties;
+  style?: React.CSSProperties;
   onClick?: () => void;
 }
 
-const LoaderImage: React.FC<LoaderImageProps> = ({ src, alt }) => {
+const LoaderImage: React.FC<LoaderImageProps> = ({
+  src,
+  alt,
+  style,
+  onClick,
+}) => {
   const { registerImage, unregisterImage } = useImageLoading();
 
   useEffect(() => {
@@ -22,6 +27,8 @@ const LoaderImage: React.FC<LoaderImageProps> = ({ src, alt }) => {
       alt={alt}
       onLoad={unregisterImage}
       onError={unregisterImage}
+      onClick={onClick}
+      style={style}
     />
   );
 };

@@ -90,7 +90,7 @@ const CertificatesPage: React.FC = () => {
                   src={`${baseUrl}${imgPath}`}
                   alt={`Certificado ${index}`}
                   onClick={() => handleImageClick(imgPath)}
-                  customStyle={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                 />
               </div>
             ))}
