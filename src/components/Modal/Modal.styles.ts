@@ -24,6 +24,11 @@ export const ModalContent = styled.div`
   max-width: 80%;
   max-height: 80%;
   overflow: auto;
+
+  @media screen and (max-width: 1000px) {
+    max-width: 93%;
+    max-height: 93%;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -34,4 +39,9 @@ export const CloseButton = styled.button`
   top: 10px;
   right: 10px;
   cursor: pointer;
+
+  @media screen and (max-width: 1000px) {
+    top: 5px;
+    right: 5px;
+  }
 `;

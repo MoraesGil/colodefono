@@ -1,5 +1,5 @@
 import React from "react";
-import { CloseButton, ModalContent, ModalWrapper } from "./styles";
+import { CloseButton, ModalContent, ModalWrapper } from "./Modal.styles";
 
 interface ModalProps {
   visible: boolean;
