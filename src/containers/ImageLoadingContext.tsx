@@ -34,9 +34,7 @@ const ImageLoadingProvider: React.FC<ImageLoadingProviderProps> = ({
   }, []);
 
   const unregisterImage = useCallback(() => {
-    setTimeout(() => {
-      setLoadingCount((count) => count - 1);
-    }, 5000);
+    setLoadingCount((count) => count - 1);
   }, []);
 
   return (
